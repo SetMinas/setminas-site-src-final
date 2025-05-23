@@ -1,0 +1,11 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="#0F3B7D">
+  <path d="M20 4h4v56h-4z" />
+  <path d="M12 8h20v4h-20z" />
+  <path d="M14 16h16v3h-16z" />
+  <path d="M40 12h4v48h-4z" />
+  <path d="M32 16h20v4h-20z" />
+  <path d="M34 24h16v3h-16z" />
+  <path d="M23 11.5 h18 v1 h-18 z" transform="rotate(-5 23 11.5)" />
+  <path d="M23 12.5 h18 v1 h-18 z" transform="rotate(-5 23 12.5)" />
+</svg>
+

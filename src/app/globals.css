@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos globais */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply text-gray-800 font-sans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+}
+
+/* Estilos responsivos */
+@layer components {
+  .container {
+    @apply px-4 mx-auto;
+    max-width: 1280px;
+  }
+  
+  /* Estilos para dispositivos móveis */
+  @media (max-width: 640px) {
+    h1 {
+      @apply text-3xl;
+    }
+    
+    h2 {
+      @apply text-2xl;
+    }
+    
+    .section-padding {
+      @apply py-10;
+    }
+    
+    /* Melhorias para touch em dispositivos móveis */
+    .touch-target {
+      @apply min-h-[44px] min-w-[44px];
+    }
+    
+    /* Ajustes para espaçamento em mobile */
+    .card {
+      @apply mb-6;
+    }
+  }
+  
+  /* Estilos para tablets */
+  @media (min-width: 641px) and (max-width: 1023px) {
+    h1 {
+      @apply text-4xl;
+    }
+    
+    h2 {
+      @apply text-3xl;
+    }
+    
+    .section-padding {
+      @apply py-12;
+    }
+  }
+  
+  /* Estilos para desktop */
+  @media (min-width: 1024px) {
+    h1 {
+      @apply text-5xl;
+    }
+    
+    h2 {
+      @apply text-4xl;
+    }
+    
+    .section-padding {
+      @apply py-16;
+    }
+  }
+  
+  /* Componentes reutilizáveis */
+  .btn-primary {
+    @apply bg-[#0F3B7D] text-white px-6 py-3 rounded-md hover:bg-[#0D336B] transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply border border-[#0F3B7D] text-[#0F3B7D] px-6 py-3 rounded-md hover:bg-gray-100 transition-colors;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-lg overflow-hidden;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8 md:mb-12;
+  }
+  
+  /* Melhorias de acessibilidade */
+  .focus-visible {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+  }
+  
+  /* Animações e transições */
+  .fade-in {
+    @apply transition-opacity duration-300 ease-in-out;
+  }
+  
+  /* Utilitários para imagens responsivas */
+  .img-responsive {
+    @apply w-full h-auto object-cover;
+  }
+  
+  /* Melhorias para formulários responsivos */
+  .form-input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+}
