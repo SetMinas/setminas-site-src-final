@@ -1,0 +1,8 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="#0F3B7D">
+  <!-- Mountains -->
+  <path d="M10 54 L25 24 L40 54 Z" />
+  <path d="M30 54 L45 34 L60 54 Z" />
+  <!-- Water/Lake -->
+  <rect x="0" y="54" width="64" height="10" />
+</svg>
+

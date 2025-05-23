@@ -1,0 +1,14 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="#0F3B7D">
+  <!-- Bench -->
+  <path d="M4 48 h18 v4 h-2 v4 h-14 v-4 h-2 z M6 50 h14 v2 h-14 z" />
+  <!-- Large Tree -->
+  <path d="M38 30 h4 v28 h-4 z" />
+  <path d="M40 34 c-8.8 0-16-7.2-16-16 C24 9.2 31.2 2 40 2 s16 7.2 16 16 C56 26.8 48.8 34 40 34 z" />
+  <!-- Small Tree/Bush -->
+  <path d="M52 40 h3 v18 h-3 z" />
+  <path d="M53.5 43 c-4.4 0-8-3.6-8-8 c0-4.4 3.6-8 8-8 s8 3.6 8 8 C61.5 39.4 57.9 43 53.5 43 z" />
+  <!-- Birds -->
+  <path d="M10 10 l6 4 l6 -4 l-2 -2 l-4 2 l-4 -2 z" />
+  <path d="M18 18 l4 2.5 l4 -2.5 l-1 -1.5 l-3 1.5 l-3 -1.5 z" />
+</svg>
+
