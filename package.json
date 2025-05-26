@@ -9,7 +9,7 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start",
+		"start": "next start -p $PORT",
 		"lint": "next lint",
 		"build:worker": "opennextjs-cloudflare",
 		"preview": "opennextjs-cloudflare && wrangler dev",
