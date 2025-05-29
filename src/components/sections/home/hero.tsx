@@ -24,7 +24,12 @@ export default function Hero() {
 						<Link href="/empreendimentos" className="btn-primary text-center">
 							Ver Empreendimentos
 						</Link>
-						<Link href="/contato" className="btn-secondary text-center">
+						<Link
+							href="http://wa.me/5535984244567"
+							rel="noopener noreferrer"
+							target="_blank"
+							className="btn-secondary text-center"
+						>
 							Fale Conosco
 						</Link>
 					</div>
