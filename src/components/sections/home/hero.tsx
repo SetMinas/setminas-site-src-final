@@ -25,9 +25,7 @@ export default function Hero() {
 							Ver Empreendimentos
 						</Link>
 						<Link
-							href="http://wa.me/5535984244567"
-							rel="noopener noreferrer"
-							target="_blank"
+							href="/contato#faleconosco"
 							className="btn-secondary text-center"
 						>
 							Fale Conosco
