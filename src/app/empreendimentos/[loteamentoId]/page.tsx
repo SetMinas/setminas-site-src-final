@@ -18,6 +18,7 @@ const loteamentosData: Record<
 		caracteristicas: string[];
 		galeria: string[];
 		mapSrc?: string;
+		contact: string;
 	}
 > = {
 	"parque-sao-judas-2": {
@@ -40,6 +41,7 @@ const loteamentosData: Record<
 			"/images/loteamentos/parque-sao-judas-2/Setminas_SaoJudasII_Fotomontagem_A_HR.jpg",
 		],
 		mapSrc: `https://www.google.com/maps?q=-20.7792160,-45.2761371&z=15&output=embed`,
+		contact: `5535984244567`,
 	},
 	"brasil-vilela-2": {
 		nome: `Brasil Vilela 2`,
@@ -60,6 +62,7 @@ const loteamentosData: Record<
 			`/images/empreendimentos/placeholder.jpg`,
 		],
 		mapSrc: `https://www.google.com/maps?q=-20.901726,-45.287382&z=15&output=embed`,
+		contact: `5535984244567`,
 	},
 	"parque-olimpico-3": {
 		nome: `Parque Olímpico 3`,
@@ -79,6 +82,7 @@ const loteamentosData: Record<
 			`/images/carrossel/placeholder5.jpg`,
 		],
 		mapSrc: `https://www.google.com/maps?q=-18.8801111,-41.9837778&z=15&output=embed`,
+		contact: `5533998800012`,
 	},
 	"parque-sao-judas": {
 		nome: `Parque São Judas`,
@@ -98,6 +102,7 @@ const loteamentosData: Record<
 			`/images/carrossel/Setminas_SaoJudasII_Fotomontagem_B_HR.jpg`,
 		],
 		mapSrc: `https://www.google.com/maps?q=-20.7779220,-45.2795167&z=15&output=embed`,
+		contact: `5535984244567`,
 	},
 	"parque-boulevard": {
 		nome: `Parque Boulevard`,
@@ -118,6 +123,7 @@ const loteamentosData: Record<
 			`/images/empreendimentos/placeholder.jpg`,
 		],
 		mapSrc: `https://www.google.com/maps?q=-18.882121,-41.986160&z=15&output=embed`,
+		contact: `5533998800012`,
 	},
 	"mirante-do-lago": {
 		nome: `Mirante do Lago`,
@@ -137,6 +143,7 @@ const loteamentosData: Record<
 			`/images/carrossel/pq_sao-judas.JPG`,
 		],
 		mapSrc: `https://www.google.com/maps?q=-20.9164856,-45.2796267&z=15&output=embed`,
+		contact: `5535984244567`,
 	},
 	"dom-couto": {
 		nome: `Dom Couto`,
@@ -156,6 +163,7 @@ const loteamentosData: Record<
 			`/images/carrossel/pq_sao-judas.JPG`,
 		],
 		mapSrc: `https://www.google.com/maps?q=-20.5007500,-45.4340278&z=15&output=embed`,
+		contact: `5535984244567`,
 	},
 	"mont-serrat": {
 		nome: `Mont Serrat`,
@@ -176,6 +184,7 @@ const loteamentosData: Record<
 			`/images/carrossel/pq_sao-judas.JPG`,
 		],
 		mapSrc: `https://www.google.com/maps?q=-21.2295595,-45.7603489&z=15&output=embed`,
+		contact: `5535984244567`,
 	},
 	"mirante-do-lago-sgp": {
 		nome: `Mirante do Lago`,
@@ -196,6 +205,7 @@ const loteamentosData: Record<
 			`/images/carrossel/placeholder_sgp2.jpg`,
 		],
 		mapSrc: `https://www.google.com/maps?q=-19.9802149,-44.8434666&z=15&output=embed`,
+		contact: `5535984244567`,
 	},
 	"mirante-da-serra": {
 		nome: `Mirante da Serra`,
@@ -216,6 +226,7 @@ const loteamentosData: Record<
 			`/images/carrossel/pq_sao-judas.JPG`,
 		],
 		mapSrc: `https://www.google.com/maps?q=-20.1976944,-44.4150556&z=15&output=embed`,
+		contact: `5535984244567`,
 	},
 	"parque-tropical": {
 		nome: `Parque Tropical`,
@@ -234,6 +245,7 @@ const loteamentosData: Record<
 			`/images/empreendimentos/placeholder.jpg`,
 		],
 		mapSrc: `https://www.google.com/maps?q=-20.717775,-46.641746&z=15&output=embed`,
+		contact: `5535984244567`,
 	},
 	"residencial-las-palmas": {
 		nome: `Residencial Las Palmas`,
@@ -253,6 +265,7 @@ const loteamentosData: Record<
 			`/images/empreendimentos/placeholder.jpg`,
 		],
 		mapSrc: `https://www.google.com/maps?q=-22.235682,-45.894845&z=15&output=embed`,
+		contact: `5535984244567`,
 	},
 	"jardim-aeroporto": {
 		nome: `Jardim Aeroporto`,
@@ -271,6 +284,7 @@ const loteamentosData: Record<
 			`/images/empreendimentos/placeholder.jpg`,
 		],
 		mapSrc: `https://www.google.com/maps?q=-21.322586,-46.732894&z=15&output=embed`,
+		contact: `5535984244567`,
 	},
 };
 
@@ -353,9 +367,14 @@ export default function LoteamentoPage() {
 							{loteamento.descricaoHeader}
 						</p>
 						<div className="flex justify-center space-x-4">
-							<button className="bg-[#0F3B7D] text-white px-8 py-3 rounded-md hover:bg-[#0D336B] transition-colors">
+							<Link
+								href={`https://wa.me/${loteamento.contact}?text=Olá, gostaria de saber mais sobre o loteamento ${loteamento.nome}.`}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="bg-[#0F3B7D] text-white px-8 py-3 rounded-md hover:bg-[#0D336B] transition-colors"
+							>
 								Solicitar Informações
-							</button>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -388,9 +407,14 @@ export default function LoteamentoPage() {
 								A Setminas oferece condições especiais de pagamento, com
 								financiamento próprio em até 180 meses e entrada facilitada.
 							</p>
-							<button className="bg-[#0F3B7D] text-white px-6 py-2 rounded-md hover:bg-[#0D336B] transition-colors">
+							<Link
+								href={`https://wa.me/${loteamento.contact}?text=Olá, gostaria de saber mais sobre o loteamento ${loteamento.nome}.`}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="bg-[#0F3B7D] text-white px-6 py-2 rounded-md hover:bg-[#0D336B] transition-colors"
+							>
 								Solicitar Condições
-							</button>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -437,7 +461,7 @@ export default function LoteamentoPage() {
 						visita.
 					</p>
 					<Link
-						href="/contato"
+						href="/contato#faleconosco"
 						className="bg-white text-[#0F3B7D] px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors"
 					>
 						Fale Conosco
