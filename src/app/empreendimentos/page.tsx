@@ -115,6 +115,21 @@ const loteamentos = [
 ];
 
 const EmpreendimentosPage: React.FC = () => {
+	const BadgeColor = (status: string): string => {
+		switch (status) {
+			case "Breve Lançamento":
+				return "bg-orange-500";
+			case "Lançamento":
+				return "bg-purple-500";
+			case "Em Obras":
+				return "bg-blue-500";
+			case "Pronto para Construir":
+				return "bg-green-500";
+			default:
+				return "bg-gray-500"; // Default color for other statuses
+		}
+	};
+
 	return (
 		<main className="min-h-screen bg-gray-50 py-12">
 			<div className="container mx-auto px-4">
@@ -181,13 +196,9 @@ const EmpreendimentosPage: React.FC = () => {
 									/>
 									{loteamento.status && (
 										<div
-											className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold text-white ${
-												loteamento.status === "Breve Lançamento"
-													? "bg-orange-500"
-													: loteamento.status === "Lançamento"
-													? "bg-green-500"
-													: "bg-blue-500" // Default for 'Em Obras' or others
-											}`}
+											className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold text-white ${BadgeColor(
+												loteamento.status
+											)}`}
 										>
 											{loteamento.status}
 										</div>
