@@ -56,11 +56,7 @@ const loteamentosData: Record<
 			`Financiamento próprio com a Setminas`,
 			`Entrega totalmente pronta pela empreendedora`,
 		],
-		galeria: [
-			`/images/loteamentos/brasil-vilela-2_principal.jpg`,
-			`/images/empreendimentos/placeholder.jpg`,
-			`/images/empreendimentos/placeholder.jpg`,
-		],
+		galeria: [`/images/loteamentos/brasil-vilela-2_principal.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-20.901726,-45.287382&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -76,11 +72,7 @@ const loteamentosData: Record<
 			`Área verde`,
 			`Financiamento próprio com a Setminas`,
 		],
-		galeria: [
-			`/images/loteamentos/pq-olimpico-3_em-obras.png`,
-			`/images/carrossel/placeholder4.jpg`,
-			`/images/carrossel/placeholder5.jpg`,
-		],
+		galeria: [`/images/loteamentos/pq-olimpico-3_em-obras.png`],
 		mapSrc: `https://www.google.com/maps?q=-18.8801111,-41.9837778&z=15&output=embed`,
 		contact: `5533998800012`,
 	},
@@ -96,11 +88,7 @@ const loteamentosData: Record<
 			`Área verde`,
 			`Financiamento próprio com a Setminas`,
 		],
-		galeria: [
-			`/images/loteamentos/mirante-do-lago_sao-goncalo-do-para.png`,
-			`/images/carrossel/pq_sao-judas.JPG`,
-			`/images/carrossel/Setminas_SaoJudasII_Fotomontagem_B_HR.jpg`,
-		],
+		galeria: [`/images/carrossel/pq_sao-judas.JPG`],
 		mapSrc: `https://www.google.com/maps?q=-20.7779220,-45.2795167&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -110,18 +98,14 @@ const loteamentosData: Record<
 		descricaoHeader: `Loteamento com excelente topografia e localização, com infraestrutura completa.`,
 		conceito: `O Parque Boulevard em Governador Valadares é a escolha perfeita para quem valoriza uma excelente topografia e localização privilegiada. Com lotes amplos e infraestrutura completa, este empreendimento foi concebido para proporcionar uma experiência de moradia superior, aliando conforto, conveniência e potencial de valorização.`,
 		caracteristicas: [
-			`Lotes a partir de 300m²`,
+			`Lotes a partir de 240m²`,
 			`Infraestrutura completa`,
 			`Localização nobre`,
 			`Área verde diferenciada`,
 			`Financiamento próprio com a Setminas`,
 			`Entrega totalmente pronta pela empreendedora`,
 		],
-		galeria: [
-			`/images/loteamentos/parque-boulevard_principal.jpg`,
-			`/images/empreendimentos/placeholder.jpg`,
-			`/images/empreendimentos/placeholder.jpg`,
-		],
+		galeria: [`/images/loteamentos/parque-boulevard_principal.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-18.882121,-41.986160&z=15&output=embed`,
 		contact: `5533998800012`,
 	},
@@ -137,11 +121,7 @@ const loteamentosData: Record<
 			`Área verde`,
 			`Financiamento próprio com a Setminas`,
 		],
-		galeria: [
-			`/images/carrossel/mirante_do_lago.png`,
-			`/images/carrossel/DJI_0318.JPG`,
-			`/images/carrossel/pq_sao-judas.JPG`,
-		],
+		galeria: [`/images/carrossel/mirante_do_lago.png`],
 		mapSrc: `https://www.google.com/maps?q=-20.9164856,-45.2796267&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -178,11 +158,7 @@ const loteamentosData: Record<
 			`Localização privilegiada`,
 			`Financiamento próprio com a Setminas`,
 		],
-		galeria: [
-			`/images/carrossel/portaria_mont-serrat.jpg`,
-			`/images/carrossel/DJI_0318.JPG`,
-			`/images/carrossel/pq_sao-judas.JPG`,
-		],
+		galeria: [`/images/carrossel/portaria_mont-serrat.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-21.2295595,-45.7603489&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -199,11 +175,7 @@ const loteamentosData: Record<
 			`Área verde`,
 			`Financiamento próprio com a Setminas`,
 		],
-		galeria: [
-			`/images/loteamentos/mirante-do-lago_sao-goncalo-do-para.png`,
-			`/images/carrossel/placeholder_sgp1.jpg`,
-			`/images/carrossel/placeholder_sgp2.jpg`,
-		],
+		galeria: [`/images/loteamentos/mirante-do-lago_sao-goncalo-do-para.png`],
 		mapSrc: `https://www.google.com/maps?q=-19.9802149,-44.8434666&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -220,11 +192,7 @@ const loteamentosData: Record<
 			`Localização privilegiada`,
 			`Financiamento próprio com a Setminas`,
 		],
-		galeria: [
-			`/images/carrossel/mirante-da-serra.png`,
-			`/images/carrossel/DJI_0318.JPG`,
-			`/images/carrossel/pq_sao-judas.JPG`,
-		],
+		galeria: [`/images/carrossel/mirante-da-serra.png`],
 		mapSrc: `https://www.google.com/maps?q=-20.1976944,-44.4150556&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -239,11 +207,7 @@ const loteamentosData: Record<
 			`Localização estratégica`,
 			`Liberado para construir em 2018`,
 		],
-		galeria: [
-			`/images/loteamentos/parque-tropical_principal.jpg`,
-			`/images/empreendimentos/placeholder.jpg`,
-			`/images/empreendimentos/placeholder.jpg`,
-		],
+		galeria: [`/images/loteamentos/parque-tropical_principal.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-20.717775,-46.641746&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -259,11 +223,7 @@ const loteamentosData: Record<
 			`Infraestrutura completa`,
 			`Liberado para construir em 2014`,
 		],
-		galeria: [
-			`/images/loteamentos/residencial-las-palmas_principal.jpg`,
-			`/images/empreendimentos/placeholder.jpg`,
-			`/images/empreendimentos/placeholder.jpg`,
-		],
+		galeria: [`/images/loteamentos/residencial-las-palmas_principal.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-22.235682,-45.894845&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -278,11 +238,7 @@ const loteamentosData: Record<
 			`Localização estratégica`,
 			`Liberado para construir em 2017`,
 		],
-		galeria: [
-			`/images/loteamentos/jardim-aeroporto_principal.jpg`,
-			`/images/empreendimentos/placeholder.jpg`,
-			`/images/empreendimentos/placeholder.jpg`,
-		],
+		galeria: [`/images/loteamentos/jardim-aeroporto_principal.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-21.322586,-46.732894&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -405,7 +361,7 @@ export default function LoteamentoPage() {
 							</h3>
 							<p className="text-gray-700 mb-4">
 								A Setminas oferece condições especiais de pagamento, com
-								financiamento próprio em até 180 meses e entrada facilitada.
+								parcelamento e entrada facilitada.
 							</p>
 							<Link
 								href={`https://wa.me/${loteamento.contact}?text=Olá, gostaria de saber mais sobre o loteamento ${loteamento.nome}.`}
