@@ -14,7 +14,7 @@ export const featureIconPaths: { [key: string]: string } = {
   'price-tag': '/icons/features/precos_acessiveis_novo.svg',
   'skyline': '/icons/features/skyline.svg',
   'walking-person': '/icons/features/walking-person.svg',
-  'graph-up': '/icons/features/alta-valorizacao_novo.svg',
+  'graph-up': '/icons/features/alta-valorizacao.svg',
   'liberado-construir': '/icons/features/liberado_construir_novo.svg',
   'condominio-fechado': '/icons/features/condominio-fechado_novo.svg', // Added: New icon for 'Condomínio fechado de luxo'
   // Add a default icon path for safety (using a simple check icon for now)
@@ -32,7 +32,7 @@ export const getIconKey = (characteristic: string): string => {
   if (lowerCaseChar.includes('vista') || lowerCaseChar.includes('lago')) return 'lake-mountains';
   if (lowerCaseChar.includes('verde')) return 'tree';
   if (lowerCaseChar.includes('acesso')) return 'gate';
-  if (lowerCaseChar.includes('financiamento')) return 'house-dollar';
+  if (lowerCaseChar.includes('parcelamento')) return 'house-dollar';
   if (lowerCaseChar.includes('preço') || lowerCaseChar.includes('acessíveis')) return 'price-tag';
   if (lowerCaseChar.includes('centro') || lowerCaseChar.includes('comercial')) return 'skyline';
   if (lowerCaseChar.includes('pista') || lowerCaseChar.includes('caminhada')) return 'walking-person';

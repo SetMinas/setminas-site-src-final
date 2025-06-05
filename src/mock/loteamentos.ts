@@ -133,7 +133,7 @@ const loteamentosData: Record<
 			`Melhor localização de Candeias`,
 			`Infraestrutura completa`,
 			`Área verde`,
-			`Financiamento próprio com a Setminas`,
+			`Parcelamento próprio com a Setminas`,
 			`Entrega totalmente pronta pela empreendedora`,
 		],
 		galeria: [
@@ -155,7 +155,7 @@ const loteamentosData: Record<
 			`Infraestrutura completa`,
 			`Localização nobre`,
 			`Área verde diferenciada`,
-			`Financiamento próprio com a Setminas`,
+			`Parcelamento próprio com a Setminas`,
 			`Entrega totalmente pronta pela empreendedora`,
 		],
 		galeria: [
@@ -176,7 +176,7 @@ const loteamentosData: Record<
 			`Região de alta valorização`,
 			`Infraestrutura completa`,
 			`Área verde`,
-			`Financiamento próprio com a Setminas`,
+			`Parcelamento próprio com a Setminas`,
 		],
 		galeria: [
 			`/images/loteamentos/pq-olimpico-3_em-obras.png`,
@@ -196,7 +196,7 @@ const loteamentosData: Record<
 			`Localização estratégica`,
 			`Infraestrutura completa`,
 			`Área verde`,
-			`Financiamento próprio com a Setminas`,
+			`Parcelamento próprio com a Setminas`,
 		],
 		galeria: [
 			`/images/loteamentos/mirante-do-lago_sao-goncalo-do-para.png`,
@@ -216,7 +216,7 @@ const loteamentosData: Record<
 			`Infraestrutura completa`,
 			`Localização nobre`,
 			`Área verde diferenciada`,
-			`Financiamento próprio com a Setminas`,
+			`Parcelamento próprio com a Setminas`,
 			`Entrega totalmente pronta pela empreendedora`,
 		],
 		galeria: [
@@ -237,7 +237,7 @@ const loteamentosData: Record<
 			`Infraestrutura completa`,
 			`Vista para o lago`,
 			`Área verde`,
-			`Financiamento próprio com a Setminas`,
+			`Parcelamento próprio com a Setminas`,
 		],
 		galeria: [
 			`/images/carrossel/mirante_do_lago.png`,
@@ -257,7 +257,7 @@ const loteamentosData: Record<
 			`Preços acessíveis`,
 			`Infraestrutura completa`,
 			`Área verde`,
-			`Financiamento próprio com a Setminas`,
+			`Parcelamento próprio com a Setminas`,
 		],
 		galeria: [
 			`/images/carrossel/residencial_dom-couto.JPG`,
@@ -278,7 +278,7 @@ const loteamentosData: Record<
 			`Área verde`,
 			`Segurança 24h`,
 			`Localização privilegiada`,
-			`Financiamento próprio com a Setminas`,
+			`Parcelamento próprio com a Setminas`,
 		],
 		galeria: [
 			`/images/carrossel/portaria_mont-serrat.jpg`,
@@ -299,7 +299,7 @@ const loteamentosData: Record<
 			`Localização privilegiada`,
 			`Vista para a lagoa`,
 			`Área verde`,
-			`Financiamento próprio com a Setminas`,
+			`Parcelamento próprio com a Setminas`,
 		],
 		galeria: [
 			`/images/loteamentos/mirante-do-lago_sao-goncalo-do-para.png`,
@@ -320,7 +320,7 @@ const loteamentosData: Record<
 			`Vista panorâmica`,
 			`Área verde preservada`,
 			`Localização privilegiada`,
-			`Financiamento próprio com a Setminas`,
+			`Parcelamento próprio com a Setminas`,
 		],
 		galeria: [
 			`/images/carrossel/mirante-da-serra.png`,
