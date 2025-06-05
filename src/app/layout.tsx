@@ -1,12 +1,13 @@
 import { ReactNode } from "react";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata = {
 	title: "Setminas - Seu Lugar ao Seu Alcance",
 	description:
-		"Há mais de 16 anos desenvolvendo loteamentos de qualidade em Minas Gerais.",
+		"Há mais de 9 anos desenvolvendo loteamentos de qualidade em Minas Gerais.",
 	icons: {
 		icon: "/images/logos/favicon_setminas.png",
 		shortcut: "/images/logos/favicon_setminas.png",
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				<Header />
 				<div className="flex-grow">{children}</div>
 				<Footer />
+				<Analytics />
 			</body>
 		</html>
 	);

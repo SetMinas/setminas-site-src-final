@@ -44,7 +44,7 @@ export const montSerratTexto = {
 
     O projeto urbanístico foi desenvolvido para maximizar o aproveitamento dos espaços, garantindo privacidade aos moradores sem abrir mão de áreas comuns que estimulam a convivência e o bem-estar coletivo.
 
-    A infraestrutura entregue elimina preocupações com serviços básicos, permitindo que você foque apenas na construção do seu imóvel, com a tranquilidade de estar investindo em um empreendimento desenvolvido por uma empresa com mais de 16 anos de experiência no mercado imobiliário.`,
+    A infraestrutura entregue elimina preocupações com serviços básicos, permitindo que você foque apenas na construção do seu imóvel, com a tranquilidade de estar investindo em um empreendimento desenvolvido por uma empresa com mais de 9 anos de experiência no mercado imobiliário.`,
     
     diferenciais: [
       "Localização privilegiada em Belo Horizonte",

@@ -190,7 +190,7 @@ export default function ContatoPage() {
 									<strong>Seu lugar ao seu alcance</strong>.
 								</p>
 								<p className="text-gray-700 text-lg">
-									É por isso que o <strong>financiamento próprio</strong> é um
+									É por isso que o <strong>parcelamento próprio</strong> é um
 									pilar da Setminas. Com ele, eliminamos burocracias e criamos
 									planos flexíveis, adaptados à sua realidade financeira. Aqui,
 									a compra do seu lote é um processo transparente, ético e
@@ -632,7 +632,7 @@ export default function ContatoPage() {
 												<option value="Informações sobre loteamentos">
 													Informações sobre loteamentos
 												</option>
-												<option value="Financiamento">Financiamento</option>
+												<option value="Parcelamento">Parcelamento</option>
 												<option value="Visita ao empreendimento">
 													Visita ao empreendimento
 												</option>

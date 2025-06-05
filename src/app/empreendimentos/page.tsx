@@ -21,7 +21,7 @@ const loteamentos = [
 		cidade: "Campo Belo",
 		descricao: "Você morando no melhor bairro de Campo Belo.",
 		imagemUrl: "/images/loteamentos/brasil-vilela-2_principal.jpg",
-		status: "Breve Lançamento",
+		status: "Em Obras",
 	},
 	{
 		id: "parque-olimpico-3",
@@ -30,7 +30,7 @@ const loteamentos = [
 		descricao:
 			"Você na região que mais valoriza em Valadares com infraestrutura completa.",
 		imagemUrl: "/images/loteamentos/pq-olimpico-3_em-obras.png",
-		status: "Lançamento",
+		status: "Em Obras",
 	},
 	{
 		id: "parque-sao-judas",
@@ -48,6 +48,7 @@ const loteamentos = [
 		descricao:
 			"Loteamento com excelente topografia e localização, com infraestrutura completa.",
 		imagemUrl: "/images/loteamentos/parque-boulevard_principal.jpg",
+		status: "Em Obras",
 	},
 	{
 		id: "mirante-do-lago",
@@ -56,6 +57,7 @@ const loteamentos = [
 		descricao:
 			"Loteamento às margens do lago, oferecendo tranquilidade e contato com a natureza.",
 		imagemUrl: "/images/empreendimentos/mirante_do_lago.png",
+		status: "Pronto para Construir",
 	},
 	{
 		id: "dom-couto",
@@ -64,6 +66,7 @@ const loteamentos = [
 		descricao:
 			"Investimento acessível com excelente localização e infraestrutura completa.",
 		imagemUrl: "/images/empreendimentos/residencial_dom-couto.JPG",
+		status: "Pronto para Construir",
 	},
 	{
 		id: "mont-serrat",
@@ -72,6 +75,7 @@ const loteamentos = [
 		descricao:
 			"Loteamento fechado com infraestrutura completa, localizado em área privilegiada.",
 		imagemUrl: "/images/empreendimentos/portaria_mont-serrat.jpg",
+		status: "Pronto para Construir",
 	},
 	{
 		id: "mirante-do-lago-sgp",
@@ -80,7 +84,8 @@ const loteamentos = [
 		descricao:
 			"Loteamento com vista para a Lagoa da Bagagem com infraestrutura completa.",
 		imagemUrl: "/images/loteamentos/mirante-do-lago_sao-goncalo-do-para.png",
-		logoUrl: "/images/logos/mirante-do-lago_sao-goncalo.png", // Specific logo for this one
+		logoUrl: "/images/logos/mirante-do-lago_sao-goncalo.png",
+		status: "Pronto para Construir",
 	},
 	{
 		id: "mirante-da-serra",
@@ -89,6 +94,7 @@ const loteamentos = [
 		descricao:
 			"Empreendimento na região central da cidade com lotes amplos e vista panorâmica.",
 		imagemUrl: "/images/empreendimentos/mirante-da-serra.png",
+		status: "Pronto para Construir",
 	},
 	{
 		id: "parque-tropical",
@@ -96,6 +102,7 @@ const loteamentos = [
 		cidade: "Passos",
 		descricao: "Mais que um projeto de arquitetura, um projeto de vida.",
 		imagemUrl: "/images/loteamentos/parque-tropical_principal.jpg",
+		status: "Pronto para Construir",
 	},
 	{
 		id: "residencial-las-palmas",
@@ -103,6 +110,7 @@ const loteamentos = [
 		cidade: "Pouso Alegre",
 		descricao: "Você nunca imaginou um lugar assim.",
 		imagemUrl: "/images/loteamentos/residencial-las-palmas_principal.jpg",
+		status: "Pronto para Construir",
 	},
 	{
 		id: "jardim-aeroporto",
@@ -111,6 +119,7 @@ const loteamentos = [
 		descricao:
 			"Loteamento acessível com toda infraestrutura completa e área verde.",
 		imagemUrl: "/images/loteamentos/jardim-aeroporto_principal.jpg",
+		status: "Pronto para Construir",
 	},
 ];
 
