@@ -9,10 +9,8 @@ export default function LaunchesSection() {
 			cidade: "Candeias - MG",
 			descricao:
 				"Última chance de comprar o seu lote na melhor localização de Candeias.",
-			imagemUrl:
-				"/images/loteamentos/Setminas_SaoJudasII_Fotomontagem_B_HR.jpg",
+			imagemUrl: "image-1.jpg",
 			status: "Em Obras",
-			statusClass: "bg-green-500",
 			tags: ["Loteamento Aberto", "A partir de 200m²"],
 		},
 		{
@@ -20,9 +18,8 @@ export default function LaunchesSection() {
 			nome: "Brasil Vilela 2",
 			cidade: "Campo Belo - MG",
 			descricao: "Você morando no melhor bairro de Campo Belo.",
-			imagemUrl: "/images/loteamentos/brasil-vilela-2_principal.jpg",
+			imagemUrl: "image-1.jpg",
 			status: "Em Obras",
-			statusClass: "bg-green-500",
 			tags: ["Loteamento Aberto", "Infraestrutura Completa"],
 		},
 		{
@@ -31,9 +28,8 @@ export default function LaunchesSection() {
 			cidade: "Governador Valadares - MG",
 			descricao:
 				"Você na região que mais valoriza em Valadares com infraestrutura completa.",
-			imagemUrl: "/images/loteamentos/pq-olimpico-3_em-obras.png",
+			imagemUrl: "image-1.png",
 			status: "Em Obras",
-			statusClass: "bg-blue-500",
 			tags: ["Loteamento Aberto", "A partir de 200m²"],
 		},
 	];
@@ -49,7 +45,7 @@ export default function LaunchesSection() {
 			case "Pronto para Construir":
 				return "bg-green-500";
 			default:
-				return "bg-gray-500"; // Default color for other statuses
+				return "bg-gray-500";
 		}
 	};
 
@@ -66,11 +62,10 @@ export default function LaunchesSection() {
 						>
 							<div className="relative h-40 sm:h-48 bg-blue-100">
 								<Image
-									src={launch.imagemUrl}
+									src={`/images/loteamentos/${launch.id}/${launch.imagemUrl}`}
 									alt={launch.nome}
-									layout="fill"
-									objectFit="cover"
-									className="absolute inset-0"
+									fill
+									className="absolute object-cover inset-0"
 								/>
 								{launch.status && (
 									<div
