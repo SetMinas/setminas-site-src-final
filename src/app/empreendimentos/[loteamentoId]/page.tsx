@@ -34,12 +34,7 @@ const loteamentosData: Record<
 			`Parcelamento próprio com a Setminas`,
 			`Entrega totalmente pronta pela empreendedora`,
 		],
-		galeria: [
-			"/images/loteamentos/Setminas_SaoJudasII_Fotomontagem_B_HR.jpg",
-			"/images/loteamentos/parque-sao-judas-2/Setminas_SaoJudasII_Implantacao.jpg",
-			"/images/loteamentos/parque-sao-judas-2/Setminas_SaoJudasII_Fotomontagem_C_R00.jpg",
-			"/images/loteamentos/parque-sao-judas-2/Setminas_SaoJudasII_Fotomontagem_A_HR.jpg",
-		],
+		galeria: [`image-1.jpg`, `image-2.jpg`, `image-3.png`, `image-4.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-20.7792160,-45.2761371&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -56,7 +51,7 @@ const loteamentosData: Record<
 			`Parcelamento próprio com a Setminas`,
 			`Entrega totalmente pronta pela empreendedora`,
 		],
-		galeria: [`/images/loteamentos/brasil-vilela-2_principal.jpg`],
+		galeria: [`image-1.jpg`, `image-2.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-20.901726,-45.287382&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -72,7 +67,13 @@ const loteamentosData: Record<
 			`Área verde`,
 			`Parcelamento próprio com a Setminas`,
 		],
-		galeria: [`/images/loteamentos/pq-olimpico-3_em-obras.png`],
+		galeria: [
+			`image-1.png`,
+			`image-2.jpg`,
+			`image-3.jpg`,
+			`image-4.jpg`,
+			`image-5.jpg`,
+		],
 		mapSrc: `https://www.google.com/maps?q=-18.8801111,-41.9837778&z=15&output=embed`,
 		contact: `5533998800012`,
 	},
@@ -88,7 +89,7 @@ const loteamentosData: Record<
 			`Área verde`,
 			`Parcelamento próprio com a Setminas`,
 		],
-		galeria: [`/images/carrossel/pq_sao-judas.JPG`],
+		galeria: [`image-1.jpg`, `image-2.jpg`, `image-3.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-20.7779220,-45.2795167&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -105,7 +106,7 @@ const loteamentosData: Record<
 			`Parcelamento próprio com a Setminas`,
 			`Entrega totalmente pronta pela empreendedora`,
 		],
-		galeria: [`/images/loteamentos/parque-boulevard_principal.jpg`],
+		galeria: [`image-1.jpg`, `image-2.jpg`, `image-3.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-18.882121,-41.986160&z=15&output=embed`,
 		contact: `5533998800012`,
 	},
@@ -121,7 +122,7 @@ const loteamentosData: Record<
 			`Área verde`,
 			`Parcelamento próprio com a Setminas`,
 		],
-		galeria: [`/images/carrossel/mirante_do_lago.png`],
+		galeria: [`image-1.jpg`, `image-2.jpg`, `image-3.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-20.9164856,-45.2796267&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -137,11 +138,7 @@ const loteamentosData: Record<
 			`Área verde`,
 			`Parcelamento próprio com a Setminas`,
 		],
-		galeria: [
-			`/images/carrossel/residencial_dom-couto.JPG`,
-			`/images/carrossel/DJI_0318.JPG`,
-			`/images/carrossel/pq_sao-judas.JPG`,
-		],
+		galeria: [`image-1.jpg`, `image-2.jpg`, `image-3.jpg`, `image-4.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-20.5007500,-45.4340278&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -158,7 +155,7 @@ const loteamentosData: Record<
 			`Localização privilegiada`,
 			`Parcelamento próprio com a Setminas`,
 		],
-		galeria: [`/images/carrossel/portaria_mont-serrat.jpg`],
+		galeria: [`image-1.jpg`, `image-2.jpg`, `image-3.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-21.2295595,-45.7603489&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -175,7 +172,7 @@ const loteamentosData: Record<
 			`Área verde`,
 			`Parcelamento próprio com a Setminas`,
 		],
-		galeria: [`/images/loteamentos/mirante-do-lago_sao-goncalo-do-para.png`],
+		galeria: [`image-1.jpg`, `image-2.jpg`, `image-3.jpg`, `image-4.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-19.9802149,-44.8434666&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -192,7 +189,7 @@ const loteamentosData: Record<
 			`Localização privilegiada`,
 			`Parcelamento próprio com a Setminas`,
 		],
-		galeria: [`/images/carrossel/mirante-da-serra.png`],
+		galeria: [`image-1.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-20.1976944,-44.4150556&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -207,7 +204,7 @@ const loteamentosData: Record<
 			`Localização estratégica`,
 			`Liberado para construir em 2018`,
 		],
-		galeria: [`/images/loteamentos/parque-tropical_principal.jpg`],
+		galeria: [`image-1.jpg`, `image-2.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-20.717775,-46.641746&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -223,7 +220,7 @@ const loteamentosData: Record<
 			`Infraestrutura completa`,
 			`Liberado para construir em 2014`,
 		],
-		galeria: [`/images/loteamentos/residencial-las-palmas_principal.jpg`],
+		galeria: [`image-1.jpg`, `image-2.jpg`, `image-3.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-22.235682,-45.894845&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -238,7 +235,7 @@ const loteamentosData: Record<
 			`Localização estratégica`,
 			`Liberado para construir em 2017`,
 		],
-		galeria: [`/images/loteamentos/jardim-aeroporto_principal.jpg`],
+		galeria: [`image-1.jpg`, `image-2.jpg`],
 		mapSrc: `https://www.google.com/maps?q=-21.322586,-46.732894&z=15&output=embed`,
 		contact: `5535984244567`,
 	},
@@ -381,7 +378,10 @@ export default function LoteamentoPage() {
 						<h2 className="text-2xl font-bold text-[#0F3B7D] mb-6 text-center">
 							Galeria de Imagens
 						</h2>
-						<ImageCarousel images={loteamento.galeria} />
+						<ImageCarousel
+							loteamento={loteamentoId}
+							images={loteamento.galeria}
+						/>
 					</div>
 				</div>
 
