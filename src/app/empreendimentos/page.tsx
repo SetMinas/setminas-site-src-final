@@ -12,7 +12,7 @@ const loteamentos = [
 		cidade: "Candeias",
 		descricao:
 			"Última chance de comprar o seu lote na melhor localização de Candeias.",
-		imagemUrl: "/images/loteamentos/Setminas_SaoJudasII_Fotomontagem_B_HR.jpg",
+		imagemUrl: "image-1.jpg",
 		status: "Em Obras",
 	},
 	{
@@ -20,7 +20,7 @@ const loteamentos = [
 		nome: "Brasil Vilela 2",
 		cidade: "Campo Belo",
 		descricao: "Você morando no melhor bairro de Campo Belo.",
-		imagemUrl: "/images/loteamentos/brasil-vilela-2_principal.jpg",
+		imagemUrl: "image-1.jpg",
 		status: "Em Obras",
 	},
 	{
@@ -29,7 +29,7 @@ const loteamentos = [
 		cidade: "Governador Valadares",
 		descricao:
 			"Você na região que mais valoriza em Valadares com infraestrutura completa.",
-		imagemUrl: "/images/loteamentos/pq-olimpico-3_em-obras.png",
+		imagemUrl: "image-1.png",
 		status: "Em Obras",
 	},
 	{
@@ -38,7 +38,7 @@ const loteamentos = [
 		cidade: "Candeias",
 		descricao:
 			"Loteamento com localização estratégica, próximo ao centro da cidade.",
-		imagemUrl: "/images/empreendimentos/pq_sao-judas.JPG",
+		imagemUrl: "image-1.jpg",
 		status: "Pronto para Construir",
 	},
 	{
@@ -47,7 +47,7 @@ const loteamentos = [
 		cidade: "Governador Valadares",
 		descricao:
 			"Loteamento com excelente topografia e localização, com infraestrutura completa.",
-		imagemUrl: "/images/loteamentos/parque-boulevard_principal.jpg",
+		imagemUrl: "image-1.jpg",
 		status: "Em Obras",
 	},
 	{
@@ -56,7 +56,7 @@ const loteamentos = [
 		cidade: "Campo Belo",
 		descricao:
 			"Loteamento às margens do lago, oferecendo tranquilidade e contato com a natureza.",
-		imagemUrl: "/images/empreendimentos/mirante_do_lago.png",
+		imagemUrl: "image-1.png",
 		status: "Pronto para Construir",
 	},
 	{
@@ -65,7 +65,7 @@ const loteamentos = [
 		cidade: "Formiga",
 		descricao:
 			"Investimento acessível com excelente localização e infraestrutura completa.",
-		imagemUrl: "/images/empreendimentos/residencial_dom-couto.JPG",
+		imagemUrl: "image-1.jpg",
 		status: "Pronto para Construir",
 	},
 	{
@@ -74,7 +74,7 @@ const loteamentos = [
 		cidade: "Campos Gerais",
 		descricao:
 			"Loteamento fechado com infraestrutura completa, localizado em área privilegiada.",
-		imagemUrl: "/images/empreendimentos/portaria_mont-serrat.jpg",
+		imagemUrl: "image-1.jpg",
 		status: "Pronto para Construir",
 	},
 	{
@@ -83,8 +83,7 @@ const loteamentos = [
 		cidade: "São Gonçalo do Pará",
 		descricao:
 			"Loteamento com vista para a Lagoa da Bagagem com infraestrutura completa.",
-		imagemUrl: "/images/loteamentos/mirante-do-lago_sao-goncalo-do-para.png",
-		logoUrl: "/images/logos/mirante-do-lago_sao-goncalo.png",
+		imagemUrl: "image-1.png",
 		status: "Pronto para Construir",
 	},
 	{
@@ -93,7 +92,7 @@ const loteamentos = [
 		cidade: "Itatiaiuçu",
 		descricao:
 			"Empreendimento na região central da cidade com lotes amplos e vista panorâmica.",
-		imagemUrl: "/images/empreendimentos/mirante-da-serra.png",
+		imagemUrl: "image-1.png",
 		status: "Pronto para Construir",
 	},
 	{
@@ -101,7 +100,7 @@ const loteamentos = [
 		nome: "Parque Tropical",
 		cidade: "Passos",
 		descricao: "Mais que um projeto de arquitetura, um projeto de vida.",
-		imagemUrl: "/images/loteamentos/parque-tropical_principal.jpg",
+		imagemUrl: "image-1.jpg",
 		status: "Pronto para Construir",
 	},
 	{
@@ -109,7 +108,7 @@ const loteamentos = [
 		nome: "Residencial Las Palmas",
 		cidade: "Pouso Alegre",
 		descricao: "Você nunca imaginou um lugar assim.",
-		imagemUrl: "/images/loteamentos/residencial-las-palmas_principal.jpg",
+		imagemUrl: "image-1.jpg",
 		status: "Pronto para Construir",
 	},
 	{
@@ -118,7 +117,7 @@ const loteamentos = [
 		cidade: "Guaxupé",
 		descricao:
 			"Loteamento acessível com toda infraestrutura completa e área verde.",
-		imagemUrl: "/images/loteamentos/jardim-aeroporto_principal.jpg",
+		imagemUrl: "image-1.jpg",
 		status: "Pronto para Construir",
 	},
 ];
@@ -160,7 +159,6 @@ const EmpreendimentosPage: React.FC = () => {
 							"parque-olimpico-3": "/images/logos/pq-olimpico-3.png",
 							"paulo-couto": "/images/logos/logo_paulo-couto_V02.svg",
 							"mirante-do-lago-sgp":
-								loteamento.logoUrl ||
 								"/images/logos/mirante-do-lago_sao-goncalo.png",
 							"brasil-vilela-2": "/images/logos/brasil-vilela-2.svg",
 							"parque-boulevard": "/images/logos/logo_parque-boulevard.svg",
@@ -196,7 +194,7 @@ const EmpreendimentosPage: React.FC = () => {
 							>
 								<div className="relative h-48">
 									<Image
-										src={loteamento.imagemUrl}
+										src={`/images/loteamentos/${loteamento.id}/${loteamento.imagemUrl}`}
 										alt={`${loteamento.nome} - ${loteamento.cidade}`}
 										width={400}
 										height={192}
