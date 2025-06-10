@@ -96,6 +96,15 @@ const loteamentos = [
 		status: "Pronto para Construir",
 	},
 	{
+		id: "residencial-euroville",
+		nome: "Residencial Euroville",
+		cidade: "Alfenas",
+		descricao:
+			"Loteamento fechado com segurança 24hs na melhor localização de Alfenas.",
+		imagemUrl: "image-1.jpg",
+		status: "Pronto para Construir",
+	},
+	{
 		id: "parque-tropical",
 		nome: "Parque Tropical",
 		cidade: "Passos",
@@ -148,23 +157,21 @@ const EmpreendimentosPage: React.FC = () => {
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{loteamentos.map((loteamento) => {
 						const logoMap: Record<string, string> = {
-							"mont-serrat": "/images/loteamentos/mont-serrat.png",
-							"mirante-da-serra": "/images/loteamentos/mirante-da-serra.png",
-							"mirante-do-lago":
-								"/images/loteamentos/mirante-do-lago_campo-belo.png",
-							"dom-couto": "/images/loteamentos/dom-couto.png",
-							"parque-sao-judas":
-								"/images/loteamentos/logo_pq-sao-judas_V02.png",
-							"parque-sao-judas-2": "/images/logos/pq-sao-judas-2a-fase.png",
-							"parque-olimpico-3": "/images/logos/pq-olimpico-3.png",
-							"paulo-couto": "/images/logos/logo_paulo-couto_V02.svg",
-							"mirante-do-lago-sgp":
-								"/images/logos/mirante-do-lago_sao-goncalo.png",
-							"brasil-vilela-2": "/images/logos/brasil-vilela-2.svg",
-							"parque-boulevard": "/images/logos/logo_parque-boulevard.svg",
-							"jardim-aeroporto": "/images/logos/jardim-aeroporto.svg",
-							"residencial-las-palmas": "/images/logos/logo_las-palmas.svg",
-							"parque-tropical": "/images/logos/logo_parque-tropical.svg",
+							"brasil-vilela-2": "brasil-vilela-2.svg",
+							"dom-couto": "dom-couto.png",
+							"jardim-aeroporto": "jardim-aeroporto.svg",
+							"mirante-da-serra": "mirante-da-serra.png",
+							"mirante-do-lago": "mirante-do-lago_campo-belo.png",
+							"mirante-do-lago-sgp": "mirante-do-lago_sao-goncalo.png",
+							"mont-serrat": "mont-serrat.png",
+							"parque-boulevard": "logo_parque-boulevard.svg",
+							"parque-olimpico-3": "pq-olimpico-3.png",
+							"parque-sao-judas": "logo_pq-sao-judas_V02.png",
+							"parque-sao-judas-2": "pq-sao-judas-2a-fase.png",
+							"parque-tropical": "logo_parque-tropical.svg",
+							"residencial-euroville": "logo_euroville.svg",
+							"residencial-las-palmas": "logo_las-palmas.svg",
+							"paulo-couto": "logo_paulo-couto_V02.svg",
 						};
 
 						const logoSrc =
@@ -216,13 +223,13 @@ const EmpreendimentosPage: React.FC = () => {
 										<div className={logoContainerClass}>
 											{isSvg ? (
 												<img
-													src={logoSrc}
+													src={`/images/logos/${logoSrc}`}
 													alt={`Logo ${loteamento.nome}`}
 													className={`w-full h-full ${imageClass}`}
 												/>
 											) : (
 												<Image
-													src={logoSrc}
+													src={`/images/logos/${logoSrc}`}
 													alt={`Logo ${loteamento.nome}`}
 													fill
 													className={imageClass}
