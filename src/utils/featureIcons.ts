@@ -17,6 +17,7 @@ export const featureIconPaths: { [key: string]: string } = {
   'graph-up': '/icons/features/alta-valorizacao.svg',
   'liberado-construir': '/icons/features/liberado_construir_novo.svg',
   'condominio-fechado': '/icons/features/condominio-fechado_novo.svg', // Added: New icon for 'Condomínio fechado de luxo'
+  'playground': '/icons/features/playground.svg',
   // Add a default icon path for safety (using a simple check icon for now)
   'default': '/icons/check-circle.svg' // Assuming a check icon exists, or use one of the downloaded ones as default
 };
@@ -39,6 +40,7 @@ export const getIconKey = (characteristic: string): string => {
   if (lowerCaseChar.includes('valorização')) return 'graph-up';
   if (lowerCaseChar.includes('liberado para construir')) return 'liberado-construir';
   if (lowerCaseChar.includes('condomínio fechado')) return 'condominio-fechado'; // Added: Mapping for 'Condomínio fechado de luxo'
+  if (lowerCaseChar.includes('infantil')) return 'playground';
   return 'default'; // Return a default icon key if no match
 };
 
