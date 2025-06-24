@@ -12,13 +12,15 @@ export default function Player() {
 			}`}
 		>
 			<video
-				controls
 				autoPlay
+				playsInline
 				muted
+				preload="metadata"
 				onEnded={() => setIsPlaying(false)}
 				className="w-full h-auto max-h-[90vh] object-cover"
 			>
-				<source src="/videos/setminas-video.mp4" type="video/mp4" />
+				{/* <source src="/videos/setminas-video-high.mp4" type="video/mp4" /> */}
+				<source src="/videos/setminas-video-low.mp4" type="video/mp4" />
 				Seu navegador não suporta o vídeo.
 			</video>
 		</section>
