@@ -18,6 +18,7 @@ export default function Player({ videos }: { videos: ListBlobResultBlob[] }) {
 				autoPlay
 				playsInline
 				muted
+				controls
 				preload="metadata"
 				onEnded={() => setIsPlaying(false)}
 				className="w-full h-auto max-h-[90vh] object-cover"
