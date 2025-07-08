@@ -178,7 +178,7 @@ const loteamentosData: Record<
 		descricaoHeader: `Loteamento com vista para a Lagoa da Bagagem com infraestrutura completa.`,
 		conceito: `Desfrute de uma vista espetacular para a Lagoa da Bagagem no Mirante do Lago, em São Gonçalo do Pará. Este loteamento oferece uma combinação única de localização privilegiada, infraestrutura completa e contato direto com a natureza, proporcionando um ambiente ideal para viver e investir com qualidade.`,
 		caracteristicas: [
-			`Lotes a partir de 300m²`,
+			`Lotes a partir de 200m²`,
 			`Infraestrutura completa`,
 			`Localização privilegiada`,
 			`Vista para a lagoa`,
