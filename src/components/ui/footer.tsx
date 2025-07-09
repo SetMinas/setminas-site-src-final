@@ -36,7 +36,7 @@ export default function Footer() {
 								</svg>
 							</a>
 							<a
-								href="https://www.instagram.com/setminasimob?igsh=NWJ1MHRiZHNjMjNz"
+								href="https://www.instagram.com/setminas?igsh=NWJ1MHRiZHNjMjNz"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="hover:text-blue-200"
