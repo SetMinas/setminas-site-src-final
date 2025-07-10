@@ -488,7 +488,7 @@ export default function ContatoPage() {
 									</h3>
 									<div className="flex space-x-4">
 										<a
-											href="https://www.instagram.com/setminasimob?igsh=NWJ1MHRiZHNjMjNz"
+											href="https://www.instagram.com/setminas?igsh=NWJ1MHRiZHNjMjNz"
 											target="_blank"
 											rel="noopener noreferrer"
 											className="bg-blue-100 p-3 rounded-full hover:bg-blue-200 transition-colors"
