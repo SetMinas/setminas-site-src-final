@@ -1,6 +1,40 @@
+"use client";
+
+import { useState } from "react";
+
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
+	const [email, setEmail] = useState("");
+	const [sign, setSign] = useState({
+		loading: false,
+		success: false,
+	});
+
+	async function atualizarPlanilha() {
+		try {
+			setSign({ ...sign, loading: true });
+			const res = await fetch("/api/update-sheet", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({
+					values: [email],
+				}),
+			});
+
+			const data = await res.json();
+			console.log(data);
+
+			setSign({ ...sign, success: true });
+			setEmail(""); // Limpa o campo de email após o envio
+		} catch (error) {
+			console.error("Erro ao atualizar planilha:", error);
+		} finally {
+			setSign({ ...sign, loading: false });
+		}
+	}
+
 	return (
 		<footer className="bg-[#0F3B7D] text-white pt-12 pb-6">
 			<div className="container mx-auto px-4">
@@ -171,17 +205,46 @@ export default function Footer() {
 						<p className="text-sm mb-4">
 							Receba novidades sobre lançamentos e ofertas especiais.
 						</p>
-						<form className="space-y-2">
+						<form
+							className="space-y-2"
+							onSubmit={(e) => {
+								e.preventDefault();
+								atualizarPlanilha();
+							}}
+						>
 							<input
 								type="email"
 								placeholder="Seu e-mail"
 								className="w-full px-4 py-2 rounded text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+								required
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
 							/>
 							<button
 								type="submit"
-								className="w-full bg-white text-[#0F3B7D] px-4 py-2 rounded hover:bg-blue-100 transition-colors"
+								className="w-full flex align-center justify-center gap-2 bg-white text-[#0F3B7D] px-4 py-2 rounded hover:bg-blue-100 transition-colors"
+								disabled={sign.loading}
 							>
-								Inscrever-se
+								Inscrever-se{" "}
+								{sign.loading ? (
+									<Image
+										src={"/icons/spinner.svg"}
+										alt="Carregando..."
+										width={24}
+										height={24}
+										className="flex-shrink-0"
+									/>
+								) : sign.success ? (
+									<Image
+										src={"/icons/check-circle.svg"}
+										alt="Sucesso!"
+										width={24}
+										height={24}
+										className="flex-shrink-0"
+									/>
+								) : (
+									<></>
+								)}
 							</button>
 						</form>
 					</div>
