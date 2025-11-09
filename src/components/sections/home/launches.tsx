@@ -9,7 +9,7 @@ export default function LaunchesSection() {
 			cidade: "São João Del Rei - MG",
 			descricao: "Você no melhor bairro de São João Del Rei.",
 			imagemUrl: "image-1.jpg",
-			status: "Em Obras",
+			status: "Lançamento",
 			tags: ["A partir de 249m²", "Infraestrutura Completa"],
 		},
 		{
