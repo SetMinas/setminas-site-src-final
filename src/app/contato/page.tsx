@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, ChangeEvent, FormEvent } from "react";
+import Player from "@/components/sections/home/player";
+import { getVideos } from "@/components/videos";
 
 import Image from "next/image";
 
@@ -18,7 +20,7 @@ interface FormStatus {
 	message: string;
 }
 
-export default function ContatoPage() {
+export default async function ContatoPage() {
 	const [formData, setFormData] = useState<FormData>({
 		nome: "",
 		email: "",
@@ -86,6 +88,8 @@ export default function ContatoPage() {
 					<h1 className="text-3xl md:text-5xl font-bold">Sobre Nós</h1>
 				</div>
 			</section>
+
+			<Player videos={(await getVideos()) || []} />
 
 			{/* About Us Content Section */}
 			<section className="py-12 md:py-16 bg-white">

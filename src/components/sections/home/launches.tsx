@@ -4,6 +4,15 @@ import Image from "next/image";
 export default function LaunchesSection() {
 	const homeLaunches = [
 		{
+			id: "alta-vista-park",
+			nome: "Alta Vista Park",
+			cidade: "São João Del Rei - MG",
+			descricao: "Você no melhor bairro de São João Del Rei.",
+			imagemUrl: "image-1.jpg",
+			status: "Em Obras",
+			tags: ["A partir de 249m²", "Infraestrutura Completa"],
+		},
+		{
 			id: "parque-sao-judas-2",
 			nome: "Parque São Judas 2ª fase",
 			cidade: "Candeias - MG",
@@ -22,16 +31,16 @@ export default function LaunchesSection() {
 			status: "Em Obras",
 			tags: ["Loteamento Aberto", "Infraestrutura Completa"],
 		},
-		{
-			id: "parque-olimpico-3",
-			nome: "Parque Olímpico 3",
-			cidade: "Governador Valadares - MG",
-			descricao:
-				"Você na região que mais valoriza em Valadares com infraestrutura completa.",
-			imagemUrl: "image-1.png",
-			status: "Em Obras",
-			tags: ["Loteamento Aberto", "A partir de 200m²"],
-		},
+		// {
+		// 	id: "parque-olimpico-3",
+		// 	nome: "Parque Olímpico 3",
+		// 	cidade: "Governador Valadares - MG",
+		// 	descricao:
+		// 		"Você na região que mais valoriza em Valadares com infraestrutura completa.",
+		// 	imagemUrl: "image-1.png",
+		// 	status: "Em Obras",
+		// 	tags: ["Loteamento Aberto", "A partir de 200m²"],
+		// },
 	];
 
 	const BadgeColor = (status: string): string => {

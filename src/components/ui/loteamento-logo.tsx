@@ -17,6 +17,7 @@ const LoteamentoLogo: React.FC<LoteamentoLogoProps> = ({
 }) => {
 	// Mapeamento de loteamentoId para arquivos de imagem
 	const logoMapById: Record<string, string> = {
+		"alta-vista-park": "logo_alta-vista-park.svg",
 		"brasil-vilela-2": "brasil-vilela-2.svg",
 		"dom-couto": "dom-couto.png",
 		"jardim-aeroporto": "jardim-aeroporto.svg",

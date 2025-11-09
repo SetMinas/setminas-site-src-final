@@ -21,6 +21,27 @@ const loteamentosData: Record<
 		contact: string;
 	}
 > = {
+	"alta-vista-park": {
+		nome: `Alta Vista Park`,
+		cidade: `São João Del Rei`,
+		descricaoHeader: `Você no melhor bairro de São João Del Rei.`,
+		conceito: `Um endereço privilegiado, ao lado do bairro São Caetano, a apenas 5 minutos do centro. Um lugar alto, com topografia inspiradora e uma vista que eleva o seu dia a dia. O cenário perfeito para quem busca a tranquilidade de um investimento seguro e a valorização do seu futuro.`,
+		caracteristicas: [
+			`Lotes a partir de 249m²`,
+			`Melhor localização de São João Del Rei`,
+			`Infraestrutura completa`,
+			`Área verde diferenciada`,
+		],
+		galeria: [
+			`image-1.jpg`,
+			`image-2.jpg`,
+			`image-3.jpg`,
+			`image-4.jpg`,
+			`image-5.jpg`,
+		],
+		mapSrc: `https://www.google.com/maps?q=-21.146565,-44.2724333&z=15&output=embed`,
+		contact: `5532999684567`,
+	},
 	"parque-sao-judas-2": {
 		nome: `Parque São Judas 2ª fase`,
 		cidade: `Candeias`,

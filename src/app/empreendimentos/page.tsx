@@ -7,6 +7,14 @@ import Image from "next/image";
 // Dados dos loteamentos na ordem desejada
 const loteamentos = [
 	{
+		id: "alta-vista-park",
+		nome: "Alta Vista Park",
+		cidade: "São João Del Rei",
+		descricao: "Você no melhor bairro de São João Del Rei.",
+		imagemUrl: "image-1.jpg",
+		status: "Em Obras",
+	},
+	{
 		id: "parque-sao-judas-2",
 		nome: "Parque São Judas 2ª fase",
 		cidade: "Candeias",
@@ -157,6 +165,7 @@ const EmpreendimentosPage: React.FC = () => {
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{loteamentos.map((loteamento) => {
 						const logoMap: Record<string, string> = {
+							"alta-vista-park": "logo_alta-vista-park.svg",
 							"brasil-vilela-2": "brasil-vilela-2.svg",
 							"dom-couto": "dom-couto.png",
 							"jardim-aeroporto": "jardim-aeroporto.svg",
