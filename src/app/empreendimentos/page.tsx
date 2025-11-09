@@ -12,7 +12,7 @@ const loteamentos = [
 		cidade: "São João Del Rei",
 		descricao: "Você no melhor bairro de São João Del Rei.",
 		imagemUrl: "image-1.jpg",
-		status: "Em Obras",
+		status: "Lançamento",
 	},
 	{
 		id: "parque-sao-judas-2",
