@@ -89,7 +89,7 @@ export default function ContatoPage() {
 				</div>
 			</section>
 
-			<Player />
+			<Player videoUrl="/videos/setminas-video-low.mp4" />
 
 			{/* About Us Content Section */}
 			<section className="py-12 md:py-16 bg-white">
