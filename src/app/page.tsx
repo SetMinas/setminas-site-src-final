@@ -7,7 +7,7 @@ import TestimonialsSection from "@/components/sections/home/testimonials";
 export default function Home() {
 	return (
 		<main>
-			<Player videoUrl="/videos/lancamento_altavistapark.mp4" />
+			<Player videoUrl="lancamento_altavistapark" />
 			<Hero />
 			<LaunchesSection />
 			<DifferentialsSection />
