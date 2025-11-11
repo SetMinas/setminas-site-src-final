@@ -3,7 +3,7 @@
 import { useState } from "react";
 // import { ListBlobResultBlob } from "@vercel/blob";
 
-export default function Player({ videoUrl }: { videoUrl: string }) {
+export default function Player({ videoName }: { videoName: string }) {
 	const [isPlaying, setIsPlaying] = useState(true);
 
 	return (
@@ -21,8 +21,8 @@ export default function Player({ videoUrl }: { videoUrl: string }) {
 				className="w-full h-auto max-h-[90vh] object-cover"
 			>
 				<source
-					key={videoUrl}
-					src={`/videos/${videoUrl}.mp4`}
+					key={videoName}
+					src={`/videos/${videoName}.mp4`}
 					type="video/mp4"
 				/>
 				Seu navegador não suporta o vídeo.
