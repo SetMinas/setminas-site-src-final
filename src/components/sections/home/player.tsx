@@ -20,7 +20,11 @@ export default function Player({ videoUrl }: { videoUrl: string }) {
 				onEnded={() => setIsPlaying(false)}
 				className="w-full h-auto max-h-[90vh] object-cover"
 			>
-				<source key="default-video" src={videoUrl} type="video/mp4" />
+				<source
+					key={videoUrl}
+					src={`/videos/${videoUrl}.mp4`}
+					type="video/mp4"
+				/>
 				Seu navegador não suporta o vídeo.
 			</video>
 		</section>
