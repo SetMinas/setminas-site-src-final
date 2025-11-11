@@ -15,7 +15,6 @@ export default function Player({ videoUrl }: { videoUrl: string }) {
 			<video
 				autoPlay
 				playsInline
-				muted
 				controls
 				preload="metadata"
 				onEnded={() => setIsPlaying(false)}
