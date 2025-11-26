@@ -9,29 +9,13 @@ export type BlogPost = {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-		slug: "imoveis-fernandinho-beira-mar-leilao-bh",
-		title: "Imóveis que foram de Fernandinho Beira-Mar vão a leilão na Grande BH",
-		excerpt: "O Ministério da Justiça e Segurança Pública (MJSP) está realizando um leilão de dois imóveis apreendidos em Betim, na Grande BH, que pertenceram a Fernandinho Beira-Mar.",
-		content: "O Ministério da Justiça e Segurança Pública (MJSP) está realizando um leilão de dois imóveis apreendidos em Betim, na Grande BH, que pertenceram a Fernandinho Beira-Mar. As propriedades foram adquiridas na década de 1990 com recursos do crime para lavagem de dinheiro do tráfico. As construções, localizadas na Rua Conceição Rosa Lima, no bairro Horto, em Betim, foram avaliadas em mais de R$ 2 milhões no total. Os lances iniciais estão a partir de 50% do valor de avaliação, e o leilão se estende até 14 de novembro. O valor arrecadado será destinado ao Fundo Nacional Antidrogas (Funad). Um dos imóveis, avaliado em R$ 1,28 milhão, chegou a sediar o 33º Batalhão da Polícia Militar de Minas Gerais entre 2000 e 2024.",
-		date: "2025-11-07",
-		coverImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029208967/EaKNBMwxpxuSABaP.jpg"
-	},
-	{
-		slug: "preco-imoveis-residenciais-bh-avanca-outubro",
-		title: "Preço dos imóveis residenciais em Belo Horizonte avança 1,17% em outubro",
-		excerpt: "O preço médio de venda dos imóveis residenciais em Belo Horizonte subiu 1,17% em outubro, fechando a R$ 10.578 por metro quadrado (m²), segundo o Índice FipeZap.",
-		content: "O preço médio de venda dos imóveis residenciais em Belo Horizonte subiu 1,17% em outubro deste ano frente ao mês anterior, fechando a R$ 10.578 por metro quadrado (m²). O Índice FipeZap de Venda Residencial da capital mineira registrou variação positiva de 11,36% no acumulado do ano e de 13,7% nos últimos 12 meses. Belo Horizonte segue entre as dez cidades com os valores mais elevados do estudo. Os bairros mais caros são Savassi (R$ 17.758/m²), Santo Agostinho (R$ 16.129/m²), Lourdes (R$ 15.612/m²) e Funcionários (R$ 15.271/m²). A valorização também foi observada na Região Metropolitana, com Betim e Contagem apresentando altas de 0,63% e 1,54% em outubro, respectivamente. A economista do Grupo OLX avalia que esse padrão de estagnação deve persistir até o fim do ano, devido ao cenário macroeconômico.",
-		date: "2025-11-04",
-		coverImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029208967/zDZfuulZxdaYzFTV.jpg"
-	},
-	{
-		slug: "4-em-cada-10-inquilinos-mg-planejam-se-mudar",
-		title: "4 em cada 10 inquilinos em MG planejam se mudar",
-		excerpt: "Pesquisa da Loft revela que 40% dos inquilinos em Minas Gerais planejam se mudar nos próximos meses, motivados por busca de espaço e aumento no valor do aluguel.",
-		content: "Quase metade dos inquilinos em Minas Gerais (40%) planeja se mudar nos próximos meses, segundo pesquisa “Raio-X do Aluguel no Brasil“ da Loft. As principais motivações para a mudança são a busca por imóveis com mais espaço (21%) e o preço do aluguel (19%). Entre os que pretendem se mudar, 60% dos mineiros querem continuar morando de aluguel, enquanto 40% planejam adquirir imóvel próprio. A maioria (48%) busca manter a mesma faixa de preço no novo imóvel, mas 39% procurarão opções mais baratas.",
-		date: "2025-11-05",
-		coverImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029208967/oMrXHGKbNaeqEOMN.webp"
-	},
+    slug: "uberlândia-anuncia-construção-de-2400-casas-do-minha-casa-minha-vida",
+    title: "Uberlândia Anuncia Construção de 2.400 Casas do Minha Casa Minha Vida",
+    excerpt: "A Prefeitura de Uberlândia anunciou a construção de 2.400 novas residências pelo programa Minha Casa Minha Vida, com obras previstas para iniciar no primeiro semestre de 2026.",
+    content: "**Relevância:** Notícia regional que demonstra a aplicação prática do programa habitacional e o aquecimento do setor de construção civil em uma das principais cidades do estado.\n\n**Resumo:** A Prefeitura de Uberlândia anunciou a construção de 2.400 novas residências pelo programa Minha Casa Minha Vida. As obras, previstas para iniciar no primeiro semestre de 2026, serão realizadas pela Pacaembu Construtora em uma área de 1,4 milhão de metros quadrados. Os imóveis serão financiados pela Caixa Econômica Federal para famílias aptas e cadastradas no município e no programa.\n\n**Fonte:** https://g37.com.br/artigos/uberlandia-tera-24-mil-casas-do-minha-casa/",
+    date: "2025-11-14",
+    coverImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029208967/yBNeYlcMWpCHwSnf.webp"
+  },
   {
     slug: "governo-federal-propõe-elevação-do-teto-do-minha-casa-minha-vida",
     title: "Governo Federal Propõe Elevação do Teto do Minha Casa Minha Vida",
@@ -49,13 +33,29 @@ export const BLOG_POSTS: BlogPost[] = [
     coverImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029208967/VxNXmKLzLTQjSRUp.jpg"
   },
   {
-    slug: "uberlândia-anuncia-construção-de-2400-casas-do-minha-casa-minha-vida",
-    title: "Uberlândia Anuncia Construção de 2.400 Casas do Minha Casa Minha Vida",
-    excerpt: "A Prefeitura de Uberlândia anunciou a construção de 2.400 novas residências pelo programa Minha Casa Minha Vida, com obras previstas para iniciar no primeiro semestre de 2026.",
-    content: "**Relevância:** Notícia regional que demonstra a aplicação prática do programa habitacional e o aquecimento do setor de construção civil em uma das principais cidades do estado.\n\n**Resumo:** A Prefeitura de Uberlândia anunciou a construção de 2.400 novas residências pelo programa Minha Casa Minha Vida. As obras, previstas para iniciar no primeiro semestre de 2026, serão realizadas pela Pacaembu Construtora em uma área de 1,4 milhão de metros quadrados. Os imóveis serão financiados pela Caixa Econômica Federal para famílias aptas e cadastradas no município e no programa.\n\n**Fonte:** https://g37.com.br/artigos/uberlandia-tera-24-mil-casas-do-minha-casa/",
-    date: "2025-11-14",
-    coverImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029208967/yBNeYlcMWpCHwSnf.webp"
-  }
+		slug: "imoveis-fernandinho-beira-mar-leilao-bh",
+		title: "Imóveis que foram de Fernandinho Beira-Mar vão a leilão na Grande BH",
+		excerpt: "O Ministério da Justiça e Segurança Pública (MJSP) está realizando um leilão de dois imóveis apreendidos em Betim, na Grande BH, que pertenceram a Fernandinho Beira-Mar.",
+		content: "O Ministério da Justiça e Segurança Pública (MJSP) está realizando um leilão de dois imóveis apreendidos em Betim, na Grande BH, que pertenceram a Fernandinho Beira-Mar. As propriedades foram adquiridas na década de 1990 com recursos do crime para lavagem de dinheiro do tráfico. As construções, localizadas na Rua Conceição Rosa Lima, no bairro Horto, em Betim, foram avaliadas em mais de R$ 2 milhões no total. Os lances iniciais estão a partir de 50% do valor de avaliação, e o leilão se estende até 14 de novembro. O valor arrecadado será destinado ao Fundo Nacional Antidrogas (Funad). Um dos imóveis, avaliado em R$ 1,28 milhão, chegou a sediar o 33º Batalhão da Polícia Militar de Minas Gerais entre 2000 e 2024.",
+		date: "2025-11-07",
+		coverImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029208967/EaKNBMwxpxuSABaP.jpg"
+	},
+	{
+		slug: "4-em-cada-10-inquilinos-mg-planejam-se-mudar",
+		title: "4 em cada 10 inquilinos em MG planejam se mudar",
+		excerpt: "Pesquisa da Loft revela que 40% dos inquilinos em Minas Gerais planejam se mudar nos próximos meses, motivados por busca de espaço e aumento no valor do aluguel.",
+		content: "Quase metade dos inquilinos em Minas Gerais (40%) planeja se mudar nos próximos meses, segundo pesquisa “Raio-X do Aluguel no Brasil“ da Loft. As principais motivações para a mudança são a busca por imóveis com mais espaço (21%) e o preço do aluguel (19%). Entre os que pretendem se mudar, 60% dos mineiros querem continuar morando de aluguel, enquanto 40% planejam adquirir imóvel próprio. A maioria (48%) busca manter a mesma faixa de preço no novo imóvel, mas 39% procurarão opções mais baratas.",
+		date: "2025-11-05",
+		coverImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029208967/oMrXHGKbNaeqEOMN.webp"
+	},
+	{
+		slug: "preco-imoveis-residenciais-bh-avanca-outubro",
+		title: "Preço dos imóveis residenciais em Belo Horizonte avança 1,17% em outubro",
+		excerpt: "O preço médio de venda dos imóveis residenciais em Belo Horizonte subiu 1,17% em outubro, fechando a R$ 10.578 por metro quadrado (m²), segundo o Índice FipeZap.",
+		content: "O preço médio de venda dos imóveis residenciais em Belo Horizonte subiu 1,17% em outubro deste ano frente ao mês anterior, fechando a R$ 10.578 por metro quadrado (m²). O Índice FipeZap de Venda Residencial da capital mineira registrou variação positiva de 11,36% no acumulado do ano e de 13,7% nos últimos 12 meses. Belo Horizonte segue entre as dez cidades com os valores mais elevados do estudo. Os bairros mais caros são Savassi (R$ 17.758/m²), Santo Agostinho (R$ 16.129/m²), Lourdes (R$ 15.612/m²) e Funcionários (R$ 15.271/m²). A valorização também foi observada na Região Metropolitana, com Betim e Contagem apresentando altas de 0,63% e 1,54% em outubro, respectivamente. A economista do Grupo OLX avalia que esse padrão de estagnação deve persistir até o fim do ano, devido ao cenário macroeconômico.",
+		date: "2025-11-04",
+		coverImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663029208967/zDZfuulZxdaYzFTV.jpg"
+	},
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
