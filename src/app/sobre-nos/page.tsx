@@ -20,7 +20,7 @@ interface FormStatus {
 	message: string;
 }
 
-export default function ContatoPage() {
+export default function SobreNosPage() {
 	const [formData, setFormData] = useState<FormData>({
 		nome: "",
 		email: "",
