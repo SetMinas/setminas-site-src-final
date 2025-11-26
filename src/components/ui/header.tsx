@@ -50,7 +50,7 @@ const Header: React.FC = () => {
 						href="/blog"
 						className="text-gray-700 hover:text-blue-600 font-medium"
 					>
-						Sobre Nós
+						Blog
 					</Link>
 				</nav>
 
