@@ -26,7 +26,7 @@ export default function BlogPage() {
 			}
 
 			return true;
-		}).sort((a, b) => (a.date < b.date ? 1 : -1)); // mais recentes primeiro
+		}).sort((a, b) => (a.date < b.date ? 1 : -1));
 	}, [startDate, endDate]);
 
 	return (
@@ -39,7 +39,6 @@ export default function BlogPage() {
 					</p>
 				</div>
 
-				{/* Botão para abrir/fechar filtros */}
 				<button
 					type="button"
 					onClick={() => setShowFilters((prev) => !prev)}
@@ -52,7 +51,6 @@ export default function BlogPage() {
 				</button>
 			</header>
 
-			{/* Accordion de filtros */}
 			<div
 				className={`overflow-hidden transition-[max-height,opacity] duration-300 ${
 					showFilters ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
@@ -111,7 +109,6 @@ export default function BlogPage() {
 				)}
 			</div>
 
-			{/* Lista de posts */}
 			<section aria-label="Lista de posts">
 				{filteredPosts.length === 0 && (
 					<p className="text-sm text-gray-500">
