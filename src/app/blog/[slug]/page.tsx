@@ -3,19 +3,17 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BLOG_POSTS, getPostBySlug } from "../posts";
 
-type BlogPostPageProps = {
-	params: {
-		slug: string;
-	};
-};
-
 export function generateStaticParams() {
 	return BLOG_POSTS.map((post) => ({
 		slug: post.slug,
 	}));
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
+export default async function BlogPostPage({
+	params,
+}: {
+	params: { slug: string };
+}) {
 	const post = await getPostBySlug(params.slug);
 
 	if (!post) {
