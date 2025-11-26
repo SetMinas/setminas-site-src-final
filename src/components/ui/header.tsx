@@ -46,6 +46,12 @@ const Header: React.FC = () => {
 					>
 						Sobre Nós
 					</Link>
+					<Link
+						href="/blog"
+						className="text-gray-700 hover:text-blue-600 font-medium"
+					>
+						Sobre Nós
+					</Link>
 				</nav>
 
 				{/* Mobile Menu Button */}
