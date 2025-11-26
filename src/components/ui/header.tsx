@@ -113,11 +113,18 @@ const Header: React.FC = () => {
 								Empreendimentos
 							</Link>
 							<Link
-								href="/contato"
+								href="/sobre-nos"
 								className="text-gray-700 hover:text-blue-600 font-medium py-2"
 								onClick={() => setIsMenuOpen(false)}
 							>
 								Sobre Nós
+							</Link>
+							<Link
+								href="/blog"
+								className="text-gray-700 hover:text-blue-600 font-medium py-2"
+								onClick={() => setIsMenuOpen(false)}
+							>
+								Blog
 							</Link>
 						</nav>
 					</div>
