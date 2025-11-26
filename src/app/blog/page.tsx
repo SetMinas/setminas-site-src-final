@@ -33,9 +33,9 @@ export default function BlogPage() {
 		<main className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-8">
 			<header className="flex items-center justify-between border-b pb-4">
 				<div>
-					<h1 className="text-3xl font-bold tracking-tight">Blog</h1>
+					<h1 className="text-3xl font-bold tracking-tight">SetMinas Blog</h1>
 					<p className="mt-1 text-sm text-gray-500">
-						Posts mockados com filtro por data.
+						Os posts mais antenados de Minas.
 					</p>
 				</div>
 
