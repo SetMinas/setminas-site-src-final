@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BLOG_POSTS, getPostBySlug } from "../posts";
+import { BLOG_POSTS, getPostBySlug } from "../../../data/posts";
 
 export function generateStaticParams() {
 	return BLOG_POSTS.map((post) => ({

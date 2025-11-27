@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { BLOG_POSTS } from "./posts";
+import { BLOG_POSTS } from "../../data/posts";
 
 export default function BlogPage() {
 	const [startDate, setStartDate] = useState<string>("");
@@ -33,7 +33,9 @@ export default function BlogPage() {
 		<main className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-8">
 			<header className="flex items-center justify-between border-b pb-4">
 				<div>
-					<h1 className="text-3xl font-bold tracking-tight">BLOG SETMINAS</h1>
+					<h1 className="text-3xl font-bold tracking-tight">
+						BLOG DE NOTÍCIAS SETMINAS
+					</h1>
 					<p className="mt-1 text-sm text-gray-500">
 						As principais notícias do mercado imobiliário de Minas Gerais
 					</p>

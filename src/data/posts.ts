@@ -8,6 +8,30 @@ export type BlogPost = {
 };
 
 export const BLOG_POSTS: BlogPost[] = [
+	{
+		slug: "tendencia-imoveis-compactos-mg",
+		title: "Tendência de Imóveis Compactos se Consolida nas Grandes Cidades Brasileiras",
+		excerpt: "A consolidação de apartamentos compactos, muitas vezes de alto padrão, atende à demanda por praticidade e localização privilegiada em centros urbanos como Belo Horizonte.",
+		content: "A paisagem urbana das grandes cidades brasileiras, incluindo Belo Horizonte, confirma uma transformação no mercado imobiliário com a consolidação dos apartamentos compactos. Essas unidades menores, muitas vezes de alto padrão, atendem à demanda por praticidade, localização privilegiada e um estilo de vida mais dinâmico, especialmente entre jovens profissionais e casais sem filhos. A tendência reflete mudanças no perfil demográfico e nas prioridades de moradia.",
+		date: "2025-11-24",
+		coverImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028468640/bieuKCNnIJCNDZGo.jpg"
+	},
+	{
+		slug: "revitalizacao-centro-bh-mercado-imobiliario",
+		title: "Projeto de Revitalização do Centro de Belo Horizonte Impulsiona Expectativas",
+		excerpt: "Iniciativas de renovação urbana no Centro de BH geram expectativas positivas no comércio e na construção civil, sinalizando uma potencial valorização da região.",
+		content: "O projeto de revitalização do Centro de Belo Horizonte está gerando expectativas positivas no comércio e na construção civil. Iniciativas de renovação urbana tendem a valorizar a região, atraindo novos investimentos e moradores, o que pode representar uma nova onda de lançamentos imobiliários e a requalificação de edifícios antigos para uso residencial ou comercial. Este movimento é visto como um catalisador para o mercado imobiliário local.",
+		date: "2025-11-24",
+		coverImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028468640/vOPRFaBTWSFimtTA.png"
+	},
+	{
+		slug: "imoveis-populares-automacao-residencial-mg",
+		title: "Imóveis Populares Passam a Ter Automação Residencial",
+		excerpt: "O conceito de 'smart homes' está sendo democratizado, com construtoras mineiras ampliando a adoção de automação residencial em empreendimentos populares.",
+		content: "O crescimento das 'smart homes' (casas inteligentes) está incentivando construtoras mineiras a ampliar a adoção do conceito de automação residencial, inclusive em imóveis populares. Uma construtora mineira, por exemplo, planeja estender o conceito 'Smart Apê' para 90% de seus projetos até 2026, democratizando o acesso à tecnologia e elevando o padrão de qualidade de vida em empreendimentos de menor custo.",
+		date: "2025-11-21",
+		coverImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028468640/jKqDyZgkzUWjsrfv.jpg"
+	},
   {
     slug: "uberlandia-anuncia-construcao-de-2400-casas-do-minha-casa-minha-vida",
     title: "Uberlândia Anuncia Construção de 2.400 Casas do Minha Casa Minha Vida",
