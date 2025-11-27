@@ -38,6 +38,8 @@ const loteamentosData: Record<
 			`image-3.jpg`,
 			`image-4.jpg`,
 			`image-5.jpg`,
+			`image-6.jpg`,
+			`image-7.jpg`,
 		],
 		mapSrc: `https://www.google.com/maps?q=-21.146565,-44.2724333&z=15&output=embed`,
 		contact: `5532999684567`,
