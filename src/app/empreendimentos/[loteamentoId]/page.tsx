@@ -1,11 +1,12 @@
 "use client"; // Mark as Client Component
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "next/navigation"; // Import useParams hook
 import LoteamentoLogo from "@/components/ui/loteamento-logo";
 import Link from "next/link";
 import ImageCarousel from "@/components/ui/image-carousel";
 import { featureIconPaths, getIconKey } from "@/utils/featureIcons";
+import { adsConversionContact, adsConversionView } from "@/lib/googleAds";
 
 // Dados dos loteamentos (mantidos no mesmo arquivo por simplicidade)
 const loteamentosData: Record<
@@ -362,6 +363,10 @@ export default function LoteamentoPage() {
 		);
 	}
 
+	useEffect(() => {
+		adsConversionView({ page: "loteamento", loteamentoId });
+	}, [loteamentoId]);
+
 	// Retorno principal do JSX para loteamento encontrado
 	return (
 		<main className="min-h-screen bg-gray-50 py-12">
@@ -390,6 +395,7 @@ export default function LoteamentoPage() {
 								target="_blank"
 								rel="noopener noreferrer"
 								className="bg-[#0F3B7D] text-white px-8 py-3 rounded-md hover:bg-[#0D336B] transition-colors"
+								onClick={() => adsConversionContact({ loteamentoId })}
 							>
 								Solicitar Informações
 							</Link>
