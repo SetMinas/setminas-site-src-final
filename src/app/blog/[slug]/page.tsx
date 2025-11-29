@@ -1,11 +1,7 @@
-"use client";
-
-import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BLOG_POSTS, getPostBySlug } from "../../../data/posts";
-import { adsConversionView } from "@/lib/googleAds";
 
 export function generateStaticParams() {
 	return BLOG_POSTS.map((post) => ({
@@ -24,10 +20,6 @@ export default async function BlogPostPage({
 	if (!post) {
 		return notFound();
 	}
-
-	useEffect(() => {
-		adsConversionView({ page: "blog", slug });
-	}, [slug]);
 
 	return (
 		<main className="mx-auto max-w-3xl px-4 py-8">
