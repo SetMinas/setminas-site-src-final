@@ -1,8 +1,10 @@
+"use client";
+
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BLOG_POSTS, getPostBySlug } from "../../../data/posts";
-import { useEffect } from "react";
 import { adsConversionView } from "@/lib/googleAds";
 
 export function generateStaticParams() {
