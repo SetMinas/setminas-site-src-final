@@ -397,7 +397,7 @@ export default function SobreNosPage() {
 											<p className="text-gray-600 mt-1">
 												Av. Alfredo Custódio de Paula,
 												<br />
-												164, sala 101, Santa Elisa.
+												130, Santa Elisa.
 												<br />
 												CEP 37.553-063.
 												<br />
@@ -692,7 +692,7 @@ export default function SobreNosPage() {
 						{" "}
 						{/* Added overflow-hidden and shadow */}
 						<iframe
-							src="https://maps.google.com/maps?q=Av.+Cel.+Alfredo+Cust%C3%B3dio+de+Paula,+164+-+Pouso+Alegre,+MG,+37550-000&output=embed"
+							src="https://maps.google.com/maps?q=Av.+Cel.+Alfredo+Cust%C3%B3dio+de+Paula,+130+-+Pouso+Alegre,+MG,+37550-000&output=embed"
 							width="100%"
 							height="100%"
 							style={{ border: 0 }}

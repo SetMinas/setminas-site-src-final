@@ -115,7 +115,7 @@ export default function Footer() {
 						<ul className="space-y-2">
 							<li>
 								<Link
-									href="/contato"
+									href="/sobre-nos"
 									className="hover:text-blue-200 transition-colors"
 								>
 									Sobre Nós
@@ -160,7 +160,7 @@ export default function Footer() {
 								<span>
 									Av. Alfredo Custódio de Paula,
 									<br />
-									164, sala 101, Santa Elisa.
+									130, Santa Elisa.
 									<br />
 									CEP 37.553-063.
 									<br />
