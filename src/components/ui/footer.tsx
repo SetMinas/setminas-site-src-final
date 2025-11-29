@@ -4,8 +4,11 @@ import { useState } from "react";
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { adsConversionContact } from "@/lib/googleAds";
 
 export default function Footer() {
+	const pathname = usePathname();
 	const [email, setEmail] = useState("");
 	const [sign, setSign] = useState({
 		loading: false,
@@ -25,6 +28,8 @@ export default function Footer() {
 
 			const data = await res.json();
 			console.log(data);
+
+			adsConversionContact({ pathname });
 
 			setSign({ ...sign, success: true });
 			setEmail(""); // Limpa o campo de email após o envio
