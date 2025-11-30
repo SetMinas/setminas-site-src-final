@@ -8,304 +8,20 @@ import ImageCarousel from "@/components/ui/image-carousel";
 import { featureIconPaths, getIconKey } from "@/utils/featureIcons";
 import { adsConversionContact, adsConversionView } from "@/lib/googleAds";
 
-// Dados dos loteamentos (mantidos no mesmo arquivo por simplicidade)
-const loteamentosData: Record<
-	string,
-	{
-		nome: string;
-		cidade: string;
-		descricaoHeader: string;
-		conceito: string;
-		caracteristicas: string[];
-		galeria: string[];
-		mapSrc?: string;
-		contact: string;
-	}
-> = {
-	"alta-vista-park": {
-		nome: `Alta Vista Park`,
-		cidade: `São João Del Rei`,
-		descricaoHeader: `Você no melhor bairro de São João Del Rei.`,
-		conceito: `Um endereço privilegiado, ao lado do bairro São Caetano, a apenas 5 minutos do centro. Um lugar alto, com topografia inspiradora e uma vista que eleva o seu dia a dia. O cenário perfeito para quem busca a tranquilidade de um investimento seguro e a valorização do seu futuro.`,
-		caracteristicas: [
-			`Lotes a partir de 249m²`,
-			`Melhor localização de São João Del Rei`,
-			`Infraestrutura completa`,
-			`Área verde diferenciada`,
-		],
-		galeria: [
-			`image-1.jpg`,
-			`image-2.jpg`,
-			`image-3.jpg`,
-			`image-4.jpg`,
-			`image-5.jpg`,
-			`image-6.jpg`,
-			`image-7.jpg`,
-		],
-		mapSrc: `https://www.google.com/maps?q=-21.146565,-44.2724333&z=15&output=embed`,
-		contact: `5532999684567`,
-	},
-	"parque-sao-judas-2": {
-		nome: `Parque São Judas 2ª fase`,
-		cidade: `Candeias`,
-		descricaoHeader: `Última chance de comprar o seu lote na melhor localização de Candeias.`,
-		conceito: `Aproveite a oportunidade derradeira de investir no Parque São Judas 2ª fase, um empreendimento que combina uma localização privilegiada em Candeias com uma infraestrutura completa pensada para o seu bem-estar. Aqui, a qualidade de vida e a valorização do seu patrimônio andam de mãos dadas, num ambiente que reflete o melhor do planejamento urbano moderno.`,
-		caracteristicas: [
-			`Lotes a partir de 200m²`,
-			`Melhor localização de Candeias`,
-			`Infraestrutura completa`,
-			`Área verde`,
-			`Parcelamento próprio com a Setminas`,
-			`Entrega totalmente pronta pela empreendedora`,
-		],
-		galeria: [
-			`image-1.jpg`,
-			`image-2.jpg`,
-			`image-3.jpg`,
-			`image-4.png`,
-			`image-5.jpg`,
-		],
-		mapSrc: `https://www.google.com/maps?q=-20.7792160,-45.2761371&z=15&output=embed`,
-		contact: `5535984244567`,
-	},
-	"brasil-vilela-2": {
-		nome: `Brasil Vilela 2`,
-		cidade: `Campo Belo`,
-		descricaoHeader: `Você morando no melhor bairro de Campo Belo.`,
-		conceito: `Descubra o Brasil Vilela 2, o endereço ideal para quem busca uma vida sofisticada no coração do melhor bairro de Campo Belo. Este empreendimento distingue-se pela sua localização nobre e uma área verde diferenciada, oferecendo um padrão de moradia elevado com infraestrutura completa e o selo de qualidade Setminas.`,
-		caracteristicas: [
-			`Lotes a partir de 300m²`,
-			`Infraestrutura completa`,
-			`Localização nobre`,
-			`Área verde diferenciada`,
-			`Parcelamento próprio com a Setminas`,
-			`Entrega totalmente pronta pela empreendedora`,
-		],
-		galeria: [`image-1.jpg`, `image-2.jpg`, `image-3.jpg`],
-		mapSrc: `https://www.google.com/maps?q=-20.901726,-45.287382&z=15&output=embed`,
-		contact: `5535984244567`,
-	},
-	"parque-olimpico-3": {
-		nome: `Parque Olímpico 3`,
-		cidade: `Governador Valadares`,
-		descricaoHeader: `Você na região que mais valoriza em Valadares com infraestrutura completa.`,
-		conceito: `Invista no seu futuro com o Parque Olímpico 3, situado na região de maior valorização em Governador Valadares. Este loteamento oferece não apenas uma infraestrutura completa e áreas verdes, mas também a certeza de um patrimônio em constante crescimento, ideal para quem busca segurança e qualidade de vida.`,
-		caracteristicas: [
-			`Lotes a partir de 240m²`,
-			`Região de alta valorização`,
-			`Infraestrutura completa`,
-			`Área verde`,
-			`Parcelamento próprio com a Setminas`,
-		],
-		galeria: [
-			`image-1.png`,
-			`image-2.png`,
-			`image-3.jpg`,
-			`image-4.jpg`,
-			`image-5.jpg`,
-			`image-6.jpg`,
-		],
-		mapSrc: `https://www.google.com/maps?q=-18.8801111,-41.9837778&z=15&output=embed`,
-		contact: `5533998800012`,
-	},
-	"parque-sao-judas": {
-		nome: `Parque São Judas`,
-		cidade: `Candeias`,
-		descricaoHeader: `Loteamento com localização estratégica, próximo ao centro da cidade.`,
-		conceito: `O Parque São Judas, em Candeias, destaca-se pela sua localização estratégica ao lado da Igreja São Judas Tadeu e próximo ao centro. Este empreendimento moderno, entregue totalmente pronto, combina fácil acesso com lazer diferenciado e terrenos planos a partir de 200m², assegurando qualidade de vida e valorização patrimonial, fruto da experiência consolidada da Setminas e Stone.`,
-		caracteristicas: [
-			`Lotes a partir de 200m²`,
-			`Localização estratégica`,
-			`Infraestrutura completa`,
-			`Área verde`,
-			`Parcelamento próprio com a Setminas`,
-		],
-		galeria: [`image-1.jpg`, `image-2.jpg`, `image-3.jpg`, `image-4.jpg`],
-		mapSrc: `https://www.google.com/maps?q=-20.7779220,-45.2795167&z=15&output=embed`,
-		contact: `5535984244567`,
-	},
-	"parque-boulevard": {
-		nome: `Parque Boulevard`,
-		cidade: `Governador Valadares`,
-		descricaoHeader: `Loteamento com excelente topografia e localização, com infraestrutura completa.`,
-		conceito: `O Parque Boulevard em Governador Valadares é a escolha perfeita para quem valoriza uma excelente topografia e localização privilegiada. Com lotes amplos e infraestrutura completa, este empreendimento foi concebido para proporcionar uma experiência de moradia superior, aliando conforto, conveniência e potencial de valorização.`,
-		caracteristicas: [
-			`Lotes a partir de 240m²`,
-			`Infraestrutura completa`,
-			`Localização nobre`,
-			`Área verde diferenciada`,
-			`Parcelamento próprio com a Setminas`,
-			`Entrega totalmente pronta pela empreendedora`,
-		],
-		galeria: [`image-1.jpg`, `image-2.jpg`, `image-3.jpg`, `image-4.jpg`],
-		mapSrc: `https://www.google.com/maps?q=-18.882121,-41.986160&z=15&output=embed`,
-		contact: `5533998800012`,
-	},
-	"mirante-do-lago": {
-		nome: `Mirante do Lago`,
-		cidade: `Campo Belo`,
-		descricaoHeader: `Loteamento às margens do lago, oferecendo tranquilidade e contato com a natureza.`,
-		conceito: `Viva em harmonia com a natureza no Mirante do Lago, em Campo Belo. Este loteamento exclusivo, situado às margens do lago, oferece um refúgio de tranquilidade com vistas deslumbrantes, infraestrutura completa e a qualidade de vida que você sempre buscou, sem abrir mão da valorização do seu investimento.`,
-		caracteristicas: [
-			`Lotes a partir de 300m²`,
-			`Infraestrutura completa`,
-			`Vista para o lago`,
-			`Área verde`,
-			`Parcelamento próprio com a Setminas`,
-		],
-		galeria: [`image-1.png`, `image-2.jpg`, `image-3.jpg`, `image-4.jpg`],
-		mapSrc: `https://www.google.com/maps?q=-20.9164856,-45.2796267&z=15&output=embed`,
-		contact: `5535984244567`,
-	},
-	"dom-couto": {
-		nome: `Dom Couto`,
-		cidade: `Formiga`,
-		descricaoHeader: `Investimento acessível com excelente localização e infraestrutura completa.`,
-		conceito: `O Dom Couto, em Formiga, representa a oportunidade ideal para quem busca um investimento acessível sem abrir mão de uma excelente localização e infraestrutura completa. Este empreendimento foi cuidadosamente planejado para oferecer qualidade de vida e segurança patrimonial, tornando a conquista do seu lote uma realidade ao seu alcance.`,
-		caracteristicas: [
-			`Lotes a partir de 200m²`,
-			`Preços acessíveis`,
-			`Infraestrutura completa`,
-			`Área verde`,
-			`Parcelamento próprio com a Setminas`,
-		],
-		galeria: [
-			`image-1.jpg`,
-			`image-2.jpg`,
-			`image-3.jpg`,
-			`image-4.jpg`,
-			`image-5.jpg`,
-		],
-		mapSrc: `https://www.google.com/maps?q=-20.5007500,-45.4340278&z=15&output=embed`,
-		contact: `5535984244567`,
-	},
-	"mont-serrat": {
-		nome: `Mont Serrat`,
-		cidade: `Campos Gerais`,
-		descricaoHeader: `Loteamento fechado com infraestrutura completa, localizado em área privilegiada.`,
-		conceito: `Experimente um novo padrão de moradia no Mont Serrat, um loteamento fechado em Campos Gerais que combina segurança 24h, infraestrutura completa e uma localização privilegiada. Projetado para quem busca exclusividade e tranquilidade, o Mont Serrat é o cenário perfeito para construir a vida que você merece.`,
-		caracteristicas: [
-			`Lotes a partir de 240m²`,
-			`Infraestrutura completa`,
-			`Área verde`,
-			`Segurança 24h`,
-			`Localização privilegiada`,
-			`Parcelamento próprio com a Setminas`,
-		],
-		galeria: [`image-1.jpg`, `image-2.jpg`, `image-3.jpg`, `image-4.jpg`],
-		mapSrc: `https://www.google.com/maps?q=-21.2295595,-45.7603489&z=15&output=embed`,
-		contact: `5535984244567`,
-	},
-	"mirante-do-lago-sgp": {
-		nome: `Mirante do Lago`,
-		cidade: `São Gonçalo do Pará`,
-		descricaoHeader: `Loteamento com vista para a Lagoa da Bagagem com infraestrutura completa.`,
-		conceito: `Desfrute de uma vista espetacular para a Lagoa da Bagagem no Mirante do Lago, em São Gonçalo do Pará. Este loteamento oferece uma combinação única de localização privilegiada, infraestrutura completa e contato direto com a natureza, proporcionando um ambiente ideal para viver e investir com qualidade.`,
-		caracteristicas: [
-			`Lotes a partir de 200m²`,
-			`Infraestrutura completa`,
-			`Localização privilegiada`,
-			`Vista para a lagoa`,
-			`Área verde`,
-			`Parcelamento próprio com a Setminas`,
-		],
-		galeria: [
-			`image-1.png`,
-			`image-2.jpg`,
-			`image-3.jpg`,
-			`image-4.jpg`,
-			`image-5.jpg`,
-		],
-		mapSrc: `https://www.google.com/maps?q=-19.9802149,-44.8434666&z=15&output=embed`,
-		contact: `5535984244567`,
-	},
-	"mirante-da-serra": {
-		nome: `Mirante da Serra`,
-		cidade: `Itatiaiuçu`,
-		descricaoHeader: `Empreendimento na região central da cidade com lotes amplos e vista panorâmica.`,
-		conceito: `O Mirante da Serra, localizado na região central de Itatiaiuçu, oferece lotes amplos com uma vista panorâmica de tirar o fôlego. Com infraestrutura completa e área verde preservada, este empreendimento é a escolha ideal para quem busca uma vida tranquila e conectada à natureza, sem abrir mão da conveniência urbana.`,
-		caracteristicas: [
-			`Lotes a partir de 250m²`,
-			`Infraestrutura completa`,
-			`Vista panorâmica`,
-			`Área verde preservada`,
-			`Localização privilegiada`,
-			`Parcelamento próprio com a Setminas`,
-		],
-		galeria: [`image-1.png`, `image-2.jpg`],
-		mapSrc: `https://www.google.com/maps?q=-20.1976944,-44.4150556&z=15&output=embed`,
-		contact: `5535984244567`,
-	},
-	"residencial-euroville": {
-		nome: `Residencial Euroville`,
-		cidade: `Alfenas`,
-		descricaoHeader: `Loteamento fechado com segurança 24hs na melhor localização de Alfenas.`,
-		conceito: `O Residencial Euroville, em Alfenas, oferece a combinação perfeita entre localização privilegiada e segurança. Situado próximo ao Hospital IMESA e ao centro da cidade, este loteamento fechado conta com portaria, segurança 24h e área de lazer. Você merece um lugar assim!`,
-		caracteristicas: [
-			`Lotes a partir de 300m²`,
-			`Melhor localização de Alfenas`,
-			`Infraestrutura completa`,
-			`Área verde diferenciada`,
-			`Parque Infantil`,
-			`Segurança 24h`,
-		],
-		galeria: [
-			`image-1.jpg`,
-			`image-2.jpg`,
-			`image-3.jpg`,
-			`image-4.jpg`,
-			`image-5.jpg`,
-		],
-		mapSrc: `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3713.9751684883117!2d-45.964187!3d-21.430221!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b5f50ccca726a1%3A0x645556eb9dbd6249!2sResidencial%20Euroville!5e0!3m2!1sen!2sbr!4v1749513076588!5m2!1sen!2sbr`,
-		contact: `5535984244567`,
-	},
-	"parque-tropical": {
-		nome: `Parque Tropical`,
-		cidade: `Passos`,
-		descricaoHeader: `Mais que um projeto de arquitetura, um projeto de vida.`,
-		conceito: `O Parque Tropical em Passos transcende o conceito de loteamento, apresentando-se como um verdadeiro projeto de vida. Com infraestrutura completa, ampla área verde e localização estratégica, este empreendimento, liberado para construir desde 2018, convida você a realizar seus planos em um ambiente pensado para o seu bem-estar.`,
-		caracteristicas: [
-			`Infraestrutura completa`,
-			`Área verde`,
-			`Localização estratégica`,
-			`Liberado para construir em 2018`,
-		],
-		galeria: [`image-1.jpg`, `image-2.jpg`, `image-3.jpg`],
-		mapSrc: `https://www.google.com/maps?q=-20.717775,-46.641746&z=15&output=embed`,
-		contact: `5535984244567`,
-	},
-	"residencial-las-palmas": {
-		nome: `Residencial Las Palmas`,
-		cidade: `Pouso Alegre`,
-		descricaoHeader: `Você nunca imaginou um lugar assim.`,
-		conceito: `Prepare-se para se surpreender com o Residencial Las Palmas em Pouso Alegre, um condomínio fechado de luxo que redefine o conceito de morar bem. Com segurança 24 horas, lazer 5 estrelas e infraestrutura completa, este empreendimento, liberado para construir desde 2014, oferece uma experiência de vida única e sofisticada.`,
-		caracteristicas: [
-			`Condomínio fechado de luxo`,
-			`Segurança 24 horas`,
-			`Lazer 5 estrelas`,
-			`Infraestrutura completa`,
-			`Liberado para construir em 2014`,
-		],
-		galeria: [`image-1.jpg`, `image-2.jpg`, `image-3.jpg`, `image-4.jpg`],
-		mapSrc: `https://www.google.com/maps?q=-22.235682,-45.894845&z=15&output=embed`,
-		contact: `5535984244567`,
-	},
-	"jardim-aeroporto": {
-		nome: `Jardim Aeroporto`,
-		cidade: `Guaxupé`,
-		descricaoHeader: `Loteamento acessível com toda infraestrutura completa e área verde.`,
-		conceito: `O Jardim Aeroporto em Guaxupé é a escolha inteligente para quem busca um loteamento acessível com infraestrutura completa e generosa área verde. Com localização estratégica e liberado para construir desde 2017, este empreendimento oferece a base perfeita para você construir seu futuro com tranquilidade e segurança.`,
-		caracteristicas: [
-			`Infraestrutura completa`,
-			`Área verde`,
-			`Localização estratégica`,
-			`Liberado para construir em 2017`,
-		],
-		galeria: [`image-1.jpg`, `image-2.jpg`, `image-3.jpg`],
-		mapSrc: `https://www.google.com/maps?q=-21.322586,-46.732894&z=15&output=embed`,
-		contact: `5535984244567`,
-	},
-};
+import { ref, onValue } from "firebase/database";
+import { database } from "@/lib/firebase";
+import Spinner from "@/components/ui/spinner";
+
+interface LoteamentoData {
+	nome: string;
+	cidade: string;
+	descricaoHeader: string;
+	conceito: string;
+	caracteristicas: string[];
+	galeria: string[];
+	mapSrc?: string;
+	contact: string;
+}
 
 type CaracteristicaItem = string | { text: string; icon: string };
 
@@ -341,11 +57,33 @@ export default function LoteamentoPage() {
 	const params = useParams(); // Use hook to get params
 	const loteamentoId = params.loteamentoId as string; // Get ID from params object
 
-	const loteamento = loteamentosData[loteamentoId];
+	// const loteamento = loteamentosData[loteamentoId];
+
+	const [loteamento, setLoteamento] = React.useState<LoteamentoData>();
+	const [loading, setLoading] = React.useState<boolean>(true);
+
+	useEffect(() => {
+		const loteamentoRef = ref(database, `loteamentos/${loteamentoId}`);
+
+		adsConversionView({ page: "loteamento", loteamentoId });
+
+		onValue(loteamentoRef, (snapshot) => {
+			const data = snapshot.val();
+			setLoteamento(data);
+			setLoading(false);
+		});
+	}, [loteamentoId]);
 
 	// Early return para loteamento não encontrado
 	if (!loteamento) {
-		return (
+		return loading ? (
+			<div className="container mx-auto px-4 py-12 text-center">
+				<div className="flex items-center justify-center">
+					<Spinner />
+					Carregando...
+				</div>
+			</div>
+		) : (
 			<div className="container mx-auto px-4 py-12 text-center">
 				<h1 className="text-3xl font-bold mb-4">
 					Empreendimento não encontrado
@@ -362,10 +100,6 @@ export default function LoteamentoPage() {
 			</div>
 		);
 	}
-
-	useEffect(() => {
-		adsConversionView({ page: "loteamento", loteamentoId });
-	}, [loteamentoId]);
 
 	// Retorno principal do JSX para loteamento encontrado
 	return (

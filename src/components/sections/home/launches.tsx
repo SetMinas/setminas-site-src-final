@@ -1,7 +1,26 @@
+// "use client";
+
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+// import { ref, onValue } from "firebase/database";
+// import { database } from "@/lib/firebase";
+// import { LoteamentoType } from "@/data/empreendimentos/loteamentoType";
+
+interface Loteamento {
+	id: string;
+	nome: string;
+	cidade: string;
+	descricao: string;
+	imagemUrl: string;
+	status: string;
+	tags: string[];
+}
+
 export default function LaunchesSection() {
+	// const [loteamentos, setLoteamentos] = React.useState<Loteamento[]>([]);
+
 	const homeLaunches = [
 		{
 			id: "alta-vista-park",
@@ -58,12 +77,46 @@ export default function LaunchesSection() {
 		}
 	};
 
+	// React.useEffect(() => {
+	// 	const loteamentoRef = ref(database, "loteamentos/");
+
+	// 	const unsubscribe = onValue(loteamentoRef, (snapshot) => {
+	// 		const data = snapshot.val();
+
+	// 		if (!data) {
+	// 			setLoteamentos([]);
+	// 			return;
+	// 		}
+
+	// 		const lista: Loteamento[] = Object.entries(data).map(([key, value]) => {
+	// 			const loteamento = value as LoteamentoType;
+
+	// 			return {
+	// 				id: key,
+	// 				nome: loteamento.nome,
+	// 				cidade: loteamento.cidade,
+	// 				descricao: loteamento.descricao,
+	// 				imagemUrl: loteamento.galeria[0],
+	// 				status: loteamento.status,
+	// 				tags: loteamento.tags || [],
+	// 			};
+	// 		});
+
+	// 		setLoteamentos(lista);
+	// 	});
+
+	// 	return () => {
+	// 		unsubscribe();
+	// 	};
+	// }, []);
+
 	return (
 		<section className="py-12 md:py-16 bg-white">
 			<div className="container mx-auto px-4">
 				<h2 className="section-title">Lançamentos mais recentes</h2>
 
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+					{/* {loteamentos.slice(0, 3).map((launch) => ( */}
 					{homeLaunches.map((launch) => (
 						<div
 							key={launch.id}
