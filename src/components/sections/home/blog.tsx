@@ -38,6 +38,7 @@ export default function BlogSection() {
 				.slice(0, 3);
 
 			setBlogPosts(lista);
+			setLoading(false);
 		});
 
 		return () => {
@@ -52,14 +53,14 @@ export default function BlogSection() {
 					Notícias mais recentes do mercado imobiliário mineiro
 				</h2>
 
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-					{loading ? (
-						<div className="flex items-center justify-center">
-							<Spinner />
-							Carregando...
-						</div>
-					) : (
-						blogPosts.map((post) => (
+				{loading ? (
+					<div className="flex items-center justify-center">
+						<Spinner />
+						Carregando...
+					</div>
+				) : (
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+						{blogPosts.map((post) => (
 							<div
 								key={post.slug}
 								className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:transform hover:scale-105"
@@ -90,9 +91,9 @@ export default function BlogSection() {
 									</Link>
 								</div>
 							</div>
-						))
-					)}
-				</div>
+						))}
+					</div>
+				)}
 
 				<div className="text-center mt-8 md:mt-12">
 					<Link
