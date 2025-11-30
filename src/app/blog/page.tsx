@@ -1,32 +1,66 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { BLOG_POSTS } from "../../data/posts";
+
+import { ref, onValue } from "firebase/database";
+import { database } from "@/lib/firebase";
+import Spinner from "@/components/ui/spinner";
+
+interface BlogType {
+	slug: string;
+	title: string;
+	excerpt: string;
+	content: string;
+	date: string;
+	coverImage: string;
+}
 
 export default function BlogPage() {
-	const [startDate, setStartDate] = useState<string>("");
-	const [endDate, setEndDate] = useState<string>("");
-	const [showFilters, setShowFilters] = useState<boolean>(false);
+	const [startDate, setStartDate] = React.useState<string>("");
+	const [endDate, setEndDate] = React.useState<string>("");
+	const [showFilters, setShowFilters] = React.useState<boolean>(false);
+	const [blogPost, setBlogPosts] = React.useState<BlogType[]>([]);
+	const [loading, setLoading] = React.useState<boolean>(true);
 
-	const filteredPosts = useMemo(() => {
-		return BLOG_POSTS.filter((post) => {
-			const postDate = new Date(post.date);
+	React.useEffect(() => {
+		const blogRef = ref(database, "noticias/");
 
-			if (startDate) {
-				const start = new Date(startDate);
-				if (postDate < start) return false;
+		const unsubscribe = onValue(blogRef, (snapshot) => {
+			const data = snapshot.val();
+
+			if (!data) {
+				setBlogPosts([]);
+				return;
 			}
 
-			if (endDate) {
-				const end = new Date(endDate);
-				end.setHours(23, 59, 59, 999);
-				if (postDate > end) return false;
-			}
+			const lista: BlogType[] = Object.entries(data)
+				.map(([_, value]) => value as BlogType)
+				.filter((post) => {
+					const postDate = new Date(post.date);
 
-			return true;
-		}).sort((a, b) => (a.date < b.date ? 1 : -1));
+					if (startDate) {
+						const start = new Date(startDate);
+						if (postDate < start) return false;
+					}
+
+					if (endDate) {
+						const end = new Date(endDate);
+						end.setHours(23, 59, 59, 999);
+						if (postDate > end) return false;
+					}
+
+					return true;
+				})
+				.sort((a, b) => (a.date < b.date ? 1 : -1));
+
+			setBlogPosts(lista);
+		});
+
+		return () => {
+			unsubscribe();
+		};
 	}, [startDate, endDate]);
 
 	return (
@@ -112,49 +146,56 @@ export default function BlogPage() {
 			</div>
 
 			<section aria-label="Lista de posts">
-				{filteredPosts.length === 0 && (
-					<p className="text-sm text-gray-500">
-						Nenhum post encontrado para o intervalo selecionado.
-					</p>
+				{blogPost.length === 0 ? (
+					loading ? (
+						<div className="flex items-center justify-center">
+							<Spinner />
+							Carregando...
+						</div>
+					) : (
+						<p className="text-sm text-gray-500">
+							Nenhum post encontrado para o intervalo selecionado.
+						</p>
+					)
+				) : (
+					<ul className="grid gap-6 md:grid-cols-2">
+						{blogPost.map((post) => (
+							<li key={post.slug}>
+								<Link
+									href={`/blog/${post.slug}`}
+									className="flex h-full flex-col overflow-hidden rounded-lg border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+								>
+									<div className="relative h-48 w-full">
+										<Image
+											src={post.coverImage}
+											alt={post.title}
+											fill
+											className="object-cover"
+											sizes="(min-width: 768px) 50vw, 100vw"
+											priority
+										/>
+									</div>
+
+									<div className="flex flex-1 flex-col p-4">
+										<span className="text-xs text-gray-500">
+											{new Date(post.date).toLocaleDateString("pt-BR")}
+										</span>
+										<h2 className="mt-1 text-lg font-semibold leading-snug">
+											{post.title}
+										</h2>
+										<p className="mt-2 line-clamp-2 text-sm text-gray-700">
+											{post.excerpt}
+										</p>
+
+										<span className="mt-3 inline-flex text-sm font-medium text-indigo-600">
+											Ler mais →
+										</span>
+									</div>
+								</Link>
+							</li>
+						))}
+					</ul>
 				)}
-
-				<ul className="grid gap-6 md:grid-cols-2">
-					{filteredPosts.map((post) => (
-						<li key={post.slug}>
-							<Link
-								href={`/blog/${post.slug}`}
-								className="flex h-full flex-col overflow-hidden rounded-lg border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-							>
-								<div className="relative h-48 w-full">
-									<Image
-										src={post.coverImage}
-										alt={post.title}
-										fill
-										className="object-cover"
-										sizes="(min-width: 768px) 50vw, 100vw"
-										priority
-									/>
-								</div>
-
-								<div className="flex flex-1 flex-col p-4">
-									<span className="text-xs text-gray-500">
-										{new Date(post.date).toLocaleDateString("pt-BR")}
-									</span>
-									<h2 className="mt-1 text-lg font-semibold leading-snug">
-										{post.title}
-									</h2>
-									<p className="mt-2 line-clamp-2 text-sm text-gray-700">
-										{post.excerpt}
-									</p>
-
-									<span className="mt-3 inline-flex text-sm font-medium text-indigo-600">
-										Ler mais →
-									</span>
-								</div>
-							</Link>
-						</li>
-					))}
-				</ul>
 			</section>
 		</main>
 	);
