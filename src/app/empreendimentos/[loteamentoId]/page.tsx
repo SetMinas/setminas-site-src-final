@@ -6,7 +6,10 @@ import LoteamentoLogo from "@/components/ui/loteamento-logo";
 import Link from "next/link";
 import ImageCarousel from "@/components/ui/image-carousel";
 import { featureIconPaths, getIconKey } from "@/utils/featureIcons";
-import { adsConversionContact, adsConversionView } from "@/lib/googleAds";
+import {
+	adsConversionContact,
+	adsConversionAllotmentView,
+} from "@/lib/googleAds";
 
 import { ref, onValue } from "firebase/database";
 import { database } from "@/lib/firebase";
@@ -65,7 +68,7 @@ export default function LoteamentoPage() {
 	useEffect(() => {
 		const loteamentoRef = ref(database, `loteamentos/${loteamentoId}`);
 
-		adsConversionView({ page: "loteamento", loteamentoId });
+		adsConversionAllotmentView({ page: loteamentoId });
 
 		onValue(loteamentoRef, (snapshot) => {
 			const data = snapshot.val();
