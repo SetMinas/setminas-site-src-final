@@ -60,8 +60,6 @@ export default function LoteamentoPage() {
 	const params = useParams(); // Use hook to get params
 	const loteamentoId = params.loteamentoId as string; // Get ID from params object
 
-	// const loteamento = loteamentosData[loteamentoId];
-
 	const [loteamento, setLoteamento] = React.useState<LoteamentoData>();
 	const [loading, setLoading] = React.useState<boolean>(true);
 
@@ -77,7 +75,6 @@ export default function LoteamentoPage() {
 		});
 	}, [loteamentoId]);
 
-	// Early return para loteamento não encontrado
 	if (!loteamento) {
 		return loading ? (
 			<div className="container mx-auto px-4 py-12 text-center">
