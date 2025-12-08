@@ -10,4 +10,5 @@ export interface LoteamentoType {
     status: string;
     tags: string[];
     index: number;
+    office: string;
 }
