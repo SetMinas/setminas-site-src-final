@@ -23,7 +23,10 @@ interface LoteamentoData {
 	caracteristicas: string[];
 	galeria: string[];
 	mapSrc?: string;
-	contact: string;
+	office: {
+		contact: string;
+		mapSrc: string;
+	};
 }
 
 type CaracteristicaItem = string | { text: string; icon: string };
@@ -125,7 +128,7 @@ export default function LoteamentoPage() {
 						</p>
 						<div className="flex justify-center space-x-4">
 							<Link
-								href={`https://wa.me/${loteamento.contact}?text=Olá, gostaria de saber mais sobre o loteamento ${loteamento.nome}.`}
+								href={`https://wa.me/${loteamento.office.contact}?text=Olá, gostaria de saber mais sobre o loteamento ${loteamento.nome}.`}
 								target="_blank"
 								rel="noopener noreferrer"
 								className="bg-[#0F3B7D] text-white px-8 py-3 rounded-md hover:bg-[#0D336B] transition-colors"
@@ -166,7 +169,7 @@ export default function LoteamentoPage() {
 								parcelamento e entrada facilitada.
 							</p>
 							<Link
-								href={`https://wa.me/${loteamento.contact}?text=Olá, gostaria de saber mais sobre o loteamento ${loteamento.nome}.`}
+								href={`https://wa.me/${loteamento.office.contact}?text=Olá, gostaria de saber mais sobre o loteamento ${loteamento.nome}.`}
 								target="_blank"
 								rel="noopener noreferrer"
 								className="bg-[#0F3B7D] text-white px-6 py-2 rounded-md hover:bg-[#0D336B] transition-colors"
@@ -208,7 +211,7 @@ export default function LoteamentoPage() {
 							loading="lazy"
 							referrerPolicy="no-referrer-when-downgrade"
 							title={`Mapa de Localização - ${loteamento.nome}`}
-						></iframe>
+						/>
 					</div>
 				</div>
 
@@ -227,6 +230,22 @@ export default function LoteamentoPage() {
 					>
 						Fale Conosco
 					</Link>
+					<p className="text-lg my-8">
+						Ou venha conhecer o nosso escritório de vendas
+					</p>
+					<iframe
+						src={
+							loteamento.office.mapSrc ||
+							"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7386.669920367668!2d-45.93580550839029!3d-22.227366377171123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cbc7b817053573%3A0xb5e64865ec8801f2!2sAv.%20Cel.%20Alfredo%20Cust%C3%B3dio%20de%20Paula%2C%20130%20-%20Santa%20Elisa%2C%20Pouso%20Alegre%20-%20MG%2C%2037550-000!5e0!3m2!1spt-BR!2sbr!4v1765224924852!5m2!1spt-BR!2sbr"
+						}
+						width="100%"
+						height="300"
+						style={{ border: 0 }}
+						allowFullScreen={true}
+						loading="lazy"
+						referrerPolicy="no-referrer-when-downgrade"
+						title={`Mapa de Localização do Escritório`}
+					/>
 				</div>
 			</div>
 		</main>

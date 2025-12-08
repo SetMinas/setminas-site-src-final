@@ -21,9 +21,13 @@
 				"image-7.jpg"
 			],
 			"mapSrc": "https://www.google.com/maps?q=-21.146565,-44.2724333&z=15&output=embed",
-			"contact": "5532999684567",
 			"status": "Lançamento",
-			"tags": ["A partir de 249m²", "Infraestrutura Completa"]
+			"tags": ["A partir de 249m²", "Infraestrutura Completa"],
+			"index": 15,
+			"office": {
+				"contact": "5532999684567",
+				"mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.247837357037!2d-44.271606523804074!3d-21.14253307721155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa1c8c04985cbcd%3A0xbfb8d8a48621d285!2sR.%20Luiz%20Carlos%20Nascimento%2C%20107%20-%20S%C3%A3o%20Caetano%2C%20S%C3%A3o%20Jo%C3%A3o%20del%20Rei%20-%20MG%2C%2036309-118!5e0!3m2!1spt-BR!2sbr!4v1765226363166!5m2!1spt-BR!2sbr"
+			}
 		},
 		"parque-sao-judas-2": {
 			"nome": "Parque São Judas 2ª fase",
@@ -46,9 +50,13 @@
 				"image-5.jpg"
 			],
 			"mapSrc": "https://www.google.com/maps?q=-20.7792160,-45.2761371&z=15&output=embed",
-			"contact": "5535984244567",
 			"status": "Em Obras",
-			"tags": ["Loteamento Aberto", "A partir de 200m²"]
+			"tags": ["Loteamento Aberto", "A partir de 200m²"],
+			"index": 14,
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3730.495042776331!2d-45.27629972381392!3d-20.77125116505735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b522c46221c559%3A0x9030f007a9ab4178!2sGaleria%20Moreira%20-%20Av.%20Dezessete%20de%20Dezembro%2C%20406%20-%20Centro%2C%20Candeias%20-%20MG%2C%2037280-000!5e0!3m2!1spt-BR!2sbr!4v1765226456267!5m2!1spt-BR!2sbr"
+			}
 		},
 		"brasil-vilela-2": {
 			"nome": "Brasil Vilela 2",
@@ -65,9 +73,13 @@
 			],
 			"galeria": ["image-1.jpg", "image-2.jpg", "image-3.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-20.901726,-45.287382&z=15&output=embed",
-			"contact": "5535984244567",
 			"status": "Em Obras",
-			"tags": ["Loteamento Aberto", "Infraestrutura Completa"]
+			"tags": ["Loteamento Aberto", "Infraestrutura Completa"],
+			"index": 13,
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"parque-olimpico-3": {
 			"nome": "Parque Olímpico 3",
@@ -90,9 +102,13 @@
 				"image-6.jpg"
 			],
 			"mapSrc": "https://www.google.com/maps?q=-18.8801111,-41.9837778&z=15&output=embed",
-			"contact": "5533998800012",
 			"status": "Em Obras",
-			"tags": ["Loteamento Aberto", "A partir de 200m²"]
+			"tags": ["Loteamento Aberto", "A partir de 200m²"],
+			"index": 12,
+			"office": {
+				"contact": "5533998800012",
+				"mapSrc": ""
+			}
 		},
 		"parque-sao-judas": {
 			"nome": "Parque São Judas",
@@ -108,8 +124,12 @@
 			],
 			"galeria": ["image-1.jpg", "image-2.jpg", "image-3.jpg", "image-4.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-20.7779220,-45.2795167&z=15&output=embed",
-			"contact": "5535984244567",
-			"status": "Pronto para Construir"
+			"status": "Pronto para Construir",
+			"index": 11,
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3730.495042776331!2d-45.27629972381392!3d-20.77125116505735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b522c46221c559%3A0x9030f007a9ab4178!2sGaleria%20Moreira%20-%20Av.%20Dezessete%20de%20Dezembro%2C%20406%20-%20Centro%2C%20Candeias%20-%20MG%2C%2037280-000!5e0!3m2!1spt-BR!2sbr!4v1765226456267!5m2!1spt-BR!2sbr"
+			}
 		},
 		"parque-boulevard": {
 			"nome": "Parque Boulevard",
@@ -126,8 +146,12 @@
 			],
 			"galeria": ["image-1.jpg", "image-2.jpg", "image-3.jpg", "image-4.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-18.882121,-41.986160&z=15&output=embed",
-			"contact": "5533998800012",
-			"status": "Em Obras"
+			"status": "Em Obras",
+			"index": 10,
+			"office": {
+				"contact": "5533998800012",
+				"mapSrc": ""
+			}
 		},
 		"mirante-do-lago": {
 			"nome": "Mirante do Lago",
@@ -143,8 +167,12 @@
 			],
 			"galeria": ["image-1.png", "image-2.jpg", "image-3.jpg", "image-4.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-20.9164856,-45.2796267&z=15&output=embed",
-			"contact": "5535984244567",
-			"status": "Pronto para Construir"
+			"status": "Pronto para Construir",
+			"index": 9,
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"dom-couto": {
 			"nome": "Dom Couto",
@@ -166,8 +194,12 @@
 				"image-5.jpg"
 			],
 			"mapSrc": "https://www.google.com/maps?q=-20.5007500,-45.4340278&z=15&output=embed",
-			"contact": "5535984244567",
-			"status": "Pronto para Construir"
+			"status": "Pronto para Construir",
+			"index": 8,
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"mont-serrat": {
 			"nome": "Mont Serrat",
@@ -184,8 +216,12 @@
 			],
 			"galeria": ["image-1.jpg", "image-2.jpg", "image-3.jpg", "image-4.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-21.2295595,-45.7603489&z=15&output=embed",
-			"contact": "5535984244567",
-			"status": "Pronto para Construir"
+			"status": "Pronto para Construir",
+			"index": 7,
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"mirante-do-lago-sgp": {
 			"nome": "Mirante do Lago",
@@ -208,8 +244,12 @@
 				"image-5.jpg"
 			],
 			"mapSrc": "https://www.google.com/maps?q=-19.9802149,-44.8434666&z=15&output=embed",
-			"contact": "5535984244567",
-			"status": "Pronto para Construir"
+			"status": "Pronto para Construir",
+			"index": 6,
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"mirante-da-serra": {
 			"nome": "Mirante da Serra",
@@ -226,8 +266,12 @@
 			],
 			"galeria": ["image-1.png", "image-2.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-20.1976944,-44.4150556&z=15&output=embed",
-			"contact": "5535984244567",
-			"status": "Pronto para Construir"
+			"status": "Pronto para Construir",
+			"index": 5,
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"residencial-euroville": {
 			"nome": "Residencial Euroville",
@@ -250,8 +294,12 @@
 				"image-5.jpg"
 			],
 			"mapSrc": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3713.9751684883117!2d-45.964187!3d-21.430221!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b5f50ccca726a1%3A0x645556eb9dbd6249!2sResidencial%20Euroville!5e0!3m2!1sen!2sbr!4v1749513076588!5m2!1sen!2sbr",
-			"contact": "5535984244567",
-			"status": "Pronto para Construir"
+			"status": "Pronto para Construir",
+			"index": 4,
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"parque-tropical": {
 			"nome": "Parque Tropical",
@@ -266,8 +314,12 @@
 			],
 			"galeria": ["image-1.jpg", "image-2.jpg", "image-3.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-20.717775,-46.641746&z=15&output=embed",
-			"contact": "5535984244567",
-			"status": "Pronto para Construir"
+			"status": "Pronto para Construir",
+			"index": 3,
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"residencial-las-palmas": {
 			"nome": "Residencial Las Palmas",
@@ -283,8 +335,12 @@
 			],
 			"galeria": ["image-1.jpg", "image-2.jpg", "image-3.jpg", "image-4.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-22.235682,-45.894845&z=15&output=embed",
-			"contact": "5535984244567",
-			"status": "Pronto para Construir"
+			"status": "Pronto para Construir",
+			"index": 2,
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"jardim-aeroporto": {
 			"nome": "Jardim Aeroporto",
@@ -299,11 +355,70 @@
 			],
 			"galeria": ["image-1.jpg", "image-2.jpg", "image-3.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-21.322586,-46.732894&z=15&output=embed",
-			"contact": "5535984244567",
-			"status": "Pronto para Construir"
+			"status": "Pronto para Construir",
+			"index": 1,
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		}
 	},
 	"noticias": {
+		"bh-e-a-melhor-cidade-para-fazer-negocios-no-mercado-imobiliario-em-2025": {
+			"slug": "bh-e-a-melhor-cidade-para-fazer-negocios-no-mercado-imobiliario-em-2025",
+			"title": "BH é a melhor cidade para fazer negócios no mercado imobiliário em 2025",
+			"excerpt": "Melhorias no centro impulsionam mercado imobiliário na capital mineira, que liderou setor em ranking da Urban Systems publicado pela EXAME.",
+			"content": [
+				"Belo Horizonte passa por transformações em sua área central e em suas artérias, que impulsionam o mercado imobiliário. A prefeitura busca ampliar a ocupação residencial dos bairros próximos ao centro, onde há melhor infraestrutura, e faz também obras de peso, como a reforma do Anel Rodoviário, importante via que conecta as rodovias BR-040 e BR-381, e a construção da linha 2 do metrô, prevista para ser entregue em 2028.",
+				"Essas obras aqueceram o mercado de trabalho na construção civil, o que abre espaço para mais negócios, de acordo com a consultoria Urban Systems, que organiza o ranking Melhores Cidades para Fazer Negócios, divulgado com exclusividade pela EXAME. Com isso, Belo Horizonte foi eleita a vencedora na categoria Construção Civil/Mercado Imobiliário.",
+				"Ao mesmo tempo, há uma aposta forte do Executivo local na desburocratização e na retomada das áreas centrais. “A primeira coisa que a gente fez foi destravar a cidade. Nós fizemos uma campanha que 'BH é a cidade do sim'. Belo Horizonte estava muito presa a dizer não para as pessoas, principalmente a quem queria empreender”, diz Álvaro Damião (União Brasil), prefeito da cidade.",
+				"Uma das estratégias da prefeitura é aumentar o interesse em bairros próximos ao centro, como Lagoinha, Carlos Prates, Concórdia e Colégio Batista. “Demos isenção de IPTU e ITBI (impostos imobiliários) para a construção nessas áreas. Estamos fazendo as pessoas entenderem que esses bairros têm condições de receber grandes prédios e modalidades novas de empreendimentos”, afirma Damião.",
+				"A prefeitura também aprovou a Lei do Retrofit para facilitar a revitalização da área central, a mais antiga da cidade. “Com os estímulos ao setor que passam a vigorar a partir de 2026, as oportunidades serão robustas”, diz Flávia Vieira, vice-presidente da Câmara do Mercado Imobiliário e Sindicato da Habitação de Minas Gerais (CMI/Secovi-MG).",
+				"Ela também aponta uma forte alta no mercado de luxo, mais concentrado na zona sul. Uma pesquisa da Brain Consultoria aponta que o mercado imobiliário de Belo Horizonte e de Nova Lima, cidade considerada uma extensão da zona sul, subiu 13,6% no terceiro trimestre de 2025, na comparação com o mesmo período de 2024. Já o segmento de luxo e alto luxo avançou 35,1% no mesmo período."
+			],
+			"date": "2025-12-02",
+			"coverImage": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028468640/nuIggRUivZJpcafI.jpeg",
+			"urlOriginal": {
+				"origin": "Exame",
+				"url": "https://exame.com/brasil/bh-e-a-melhor-cidade-para-fazer-negocios-no-mercado-imobiliario-em-2025/"
+			}
+		},
+		"sul-de-minas-atrai-novos-negocios-e-aquece-o-mercado-imobiliario": {
+			"slug": "sul-de-minas-atrai-novos-negocios-e-aquece-o-mercado-imobiliario",
+			"title": "Sul de Minas atrai novos negócios e aquece o mercado imobiliário",
+			"excerpt": "O sul de Minas Gerais vive um momento de expansão econômica e imobiliária, atraindo investimentos privados e públicos, impulsionada pelo avanço da infraestrutura, diversificação produtiva e qualidade de vida.",
+			"content": [
+				"O sul de Minas Gerais vive um momento de expansão econômica e imobiliária. A região tem atraído cada vez mais investimentos privados e públicos, impulsionada pelo avanço da infraestrutura, pela diversificação produtiva e pela qualidade de vida que oferece aos moradores.",
+				"Segundo dados da Invest Minas, agência estadual responsável pela atração de novos negócios, a região é a que mais tem recebido investimentos no estado, totalizando 27% dos projetos trazidos pelo órgão e a criação de mais de 50 mil novos empregos.",
+				"Além disso, estudo da Fundação João Pinheiro (FJP) de setembro deste ano, mostra que o PIB de Varginha, por exemplo, avançou 136,1% entre 2010 e 2021, passando de R$23,2 bilhões para R$54,8 bilhões. Esses números explicam o interesse da cervejaria holandesa Heineken, do grupo O Boticário, da incorporadora mineira Emcorp, entre outros, que se instalaram recentemente na região.",
+				"“Temos acompanhado as mudanças de comportamento do consumidor, que não está à procura apenas de preços mais competitivos, mas principalmente de qualidade de vida. Assim, o interior deixou de ser uma opção secundária e passou a ser um destino estratégico para quem deseja morar e investir”, afirma Pedro Ivo Vasconcelos, diretor da Emcorp.",
+				"A empresa, que já possui empreendimentos na cidade de Machado, prepara novos lançamentos para 2026 em Passos e São Sebastião do Paraíso. Segundo Pedro Ivo, o crescimento econômico da região cria um ambiente fértil para o desenvolvimento de empreendimentos planejados, voltados a uma nova classe média que valoriza conforto, mobilidade e segurança."
+			],
+			"date": "2025-12-04",
+			"coverImage": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028468640/NllUcPJEAcjmLrTW.jpg",
+			"urlOriginal": {
+				"origin": "Portal Radar Imobiliário",
+				"url": "https://portalradarimobiliario.com.br/noticia/7725/sul-de-minas-atrai-novos-negocios-e-aquece-o-mercado-imobiliario"
+			}
+		},
+		"avanco-ou-alerta-nova-regra-sobre-imoveis-modifica-percentuais-e-pode-aumentar-o-imposto-na-hora-da-venda": {
+			"slug": "avanco-ou-alerta-nova-regra-sobre-imoveis-modifica-percentuais-e-pode-aumentar-o-imposto-na-hora-da-venda",
+			"title": "Avanço ou alerta? Nova regra sobre imóveis modifica percentuais e pode aumentar o imposto na hora da venda",
+			"excerpt": "O novo Regime Especial de Atualização e Regularização Patrimonial (REARP) permite atualizar o valor de imóveis para o valor de mercado, mediante pagamento antecipado de 4% sobre a diferença, impactando o imposto sobre ganho de capital na venda.",
+			"content": [
+				"O novo Regime Especial de Atualização e Regularização Patrimonial (REARP), instituído pela Lei nº 15.265/2025, publicada em 21/11/2025, passou a integrar o conjunto de ferramentas disponíveis para quem possui imóveis no Brasil e precisa organizar a própria vida fiscal, permitindo atualizar o valor dos bens para a realidade de mercado mediante pagamento antecipado, em condições específicas, de parte do imposto sobre ganho de capital, tanto para pessoas físicas quanto jurídicas, funcionando como potencial instrumento de planejamento tributário e patrimonial.",
+				"Sem o REARP, a tributação de imóveis segue o modelo tradicional: o bem é declarado pelo custo de aquisição, isto é, pelo preço efetivamente pago na época da compra, sem qualquer correção monetária ao longo dos anos. Na venda, a diferença entre o valor de aquisição e o valor de alienação é considerada ganho de capital, sujeita a alíquotas progressivas de até 22,5%.",
+				"O REARP permite que o proprietário atualize o valor do imóvel para um patamar mais próximo do mercado antes da venda, pagando 4% sobre a diferença entre o valor anterior e o valor atualizado, o que equivale a antecipar parte do imposto para reduzir o impacto futuro do ganho de capital em imóveis com forte valorização.",
+				"A decisão de aderir ao REARP varia conforme o perfil do imóvel, o horizonte de tempo e os objetivos do contribuinte, sendo geralmente mais interessante em imóveis com grande defasagem entre o valor declarado e o valor de mercado, mantidos para o longo prazo e que não se enquadram nas hipóteses usuais de isenção ou redução do ganho de capital.",
+				"Como a Lei nº 15.265/2025 também alcança pessoas jurídicas, o REARP pode ser utilizado por holdings patrimoniais, sociedades imobiliárias e outras empresas que detenham imóveis, permitindo alinhar o valor contábil ao valor de mercado com carga tributária, em princípio, mais favorecida."
+			],
+			"date": "2025-12-03",
+			"coverImage": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028468640/LwlQECNheWnSpDqO.jpg",
+			"urlOriginal": {
+				"origin": "Estado de Minas",
+				"url": "https://www.em.com.br/emfoco/2025/12/03/avanco-ou-alerta-nova-regra-sobre-imoveis-modifica-percentuais-e-pode-aumentar-o-imposto-na-hora-da-venda/"
+			}
+		},
 		"tendencia-imoveis-compactos-mg": {
 			"slug": "tendencia-imoveis-compactos-mg",
 			"title": "Tendência de Imóveis Compactos se Consolida nas Grandes Cidades Brasileiras",

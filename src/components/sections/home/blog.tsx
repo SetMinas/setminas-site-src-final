@@ -12,9 +12,13 @@ interface BlogType {
 	slug: string;
 	title: string;
 	excerpt: string;
-	content: string;
+	content: string[];
 	date: string;
 	coverImage: string;
+	urlOriginal?: {
+		origin?: string;
+		url: string;
+	};
 }
 
 export default function BlogSection() {
