@@ -1,12 +1,12 @@
-// "use client";
+"use client";
 
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-// import { ref, onValue } from "firebase/database";
-// import { database } from "@/lib/firebase";
-// import { LoteamentoType } from "@/data/empreendimentos/loteamentoType";
+import { ref, onValue } from "firebase/database";
+import { database } from "@/lib/firebase";
+import { LoteamentoType } from "@/data/empreendimentos/loteamentoType";
 
 interface Loteamento {
 	id: string;
@@ -16,51 +16,11 @@ interface Loteamento {
 	imagemUrl: string;
 	status: string;
 	tags: string[];
+	index: number;
 }
 
 export default function LaunchesSection() {
-	// const [loteamentos, setLoteamentos] = React.useState<Loteamento[]>([]);
-
-	const homeLaunches = [
-		{
-			id: "alta-vista-park",
-			nome: "Alta Vista Park",
-			cidade: "São João Del Rei - MG",
-			descricao: "Você no melhor bairro de São João Del Rei.",
-			imagemUrl: "image-1.jpg",
-			status: "Lançamento",
-			tags: ["A partir de 249m²", "Infraestrutura Completa"],
-		},
-		{
-			id: "parque-sao-judas-2",
-			nome: "Parque São Judas 2ª fase",
-			cidade: "Candeias - MG",
-			descricao:
-				"Última chance de comprar o seu lote na melhor localização de Candeias.",
-			imagemUrl: "image-1.jpg",
-			status: "Em Obras",
-			tags: ["Loteamento Aberto", "A partir de 200m²"],
-		},
-		{
-			id: "brasil-vilela-2",
-			nome: "Brasil Vilela 2",
-			cidade: "Campo Belo - MG",
-			descricao: "Você morando no melhor bairro de Campo Belo.",
-			imagemUrl: "image-1.jpg",
-			status: "Em Obras",
-			tags: ["Loteamento Aberto", "Infraestrutura Completa"],
-		},
-		// {
-		// 	id: "parque-olimpico-3",
-		// 	nome: "Parque Olímpico 3",
-		// 	cidade: "Governador Valadares - MG",
-		// 	descricao:
-		// 		"Você na região que mais valoriza em Valadares com infraestrutura completa.",
-		// 	imagemUrl: "image-1.png",
-		// 	status: "Em Obras",
-		// 	tags: ["Loteamento Aberto", "A partir de 200m²"],
-		// },
-	];
+	const [loteamentos, setLoteamentos] = React.useState<Loteamento[]>([]);
 
 	const BadgeColor = (status: string): string => {
 		switch (status) {
@@ -77,38 +37,39 @@ export default function LaunchesSection() {
 		}
 	};
 
-	// React.useEffect(() => {
-	// 	const loteamentoRef = ref(database, "loteamentos/");
+	React.useEffect(() => {
+		const loteamentoRef = ref(database, "loteamentos/");
 
-	// 	const unsubscribe = onValue(loteamentoRef, (snapshot) => {
-	// 		const data = snapshot.val();
+		const unsubscribe = onValue(loteamentoRef, (snapshot) => {
+			const data = snapshot.val();
 
-	// 		if (!data) {
-	// 			setLoteamentos([]);
-	// 			return;
-	// 		}
+			if (!data) {
+				setLoteamentos([]);
+				return;
+			}
 
-	// 		const lista: Loteamento[] = Object.entries(data).map(([key, value]) => {
-	// 			const loteamento = value as LoteamentoType;
+			const lista: Loteamento[] = Object.entries(data).map(([key, value]) => {
+				const loteamento = value as LoteamentoType;
 
-	// 			return {
-	// 				id: key,
-	// 				nome: loteamento.nome,
-	// 				cidade: loteamento.cidade,
-	// 				descricao: loteamento.descricao,
-	// 				imagemUrl: loteamento.galeria[0],
-	// 				status: loteamento.status,
-	// 				tags: loteamento.tags || [],
-	// 			};
-	// 		});
+				return {
+					id: key,
+					nome: loteamento.nome,
+					cidade: loteamento.cidade,
+					descricao: loteamento.descricao,
+					imagemUrl: loteamento.galeria[0],
+					status: loteamento.status,
+					tags: loteamento.tags || [],
+					index: loteamento.index,
+				};
+			});
 
-	// 		setLoteamentos(lista);
-	// 	});
+			setLoteamentos(lista.sort((a, b) => b.index - a.index).splice(0, 3));
+		});
 
-	// 	return () => {
-	// 		unsubscribe();
-	// 	};
-	// }, []);
+		return () => {
+			unsubscribe();
+		};
+	}, []);
 
 	return (
 		<section className="py-12 md:py-16 bg-white">
@@ -117,7 +78,7 @@ export default function LaunchesSection() {
 
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 					{/* {loteamentos.slice(0, 3).map((launch) => ( */}
-					{homeLaunches.map((launch) => (
+					{loteamentos.map((launch) => (
 						<div
 							key={launch.id}
 							className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:transform hover:scale-105"

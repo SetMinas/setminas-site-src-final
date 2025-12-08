@@ -17,6 +17,7 @@ interface Loteamento {
 	descricao: string;
 	imagemUrl: string;
 	status: string;
+	index: number;
 }
 
 const EmpreendimentosPage: React.FC = () => {
@@ -57,10 +58,11 @@ const EmpreendimentosPage: React.FC = () => {
 					descricao: loteamento.descricao,
 					imagemUrl: loteamento.galeria[0],
 					status: loteamento.status,
+					index: loteamento.index,
 				};
 			});
 
-			setLoteamentos(lista);
+			setLoteamentos(lista.sort((a, b) => b.index - a.index));
 		});
 
 		return () => {

@@ -9,4 +9,5 @@ export interface LoteamentoType {
     contact: string;
     status: string;
     tags: string[];
+    index: number;
 }
