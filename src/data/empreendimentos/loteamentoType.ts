@@ -6,9 +6,11 @@ export interface LoteamentoType {
     caracteristicas: string[];
     galeria: string[];
     mapSrc: string;
-    contact: string;
     status: string;
     tags: string[];
     index: number;
-    office: string;
+    office: {
+        contact: string;
+        mapSrc: string;
+    }
 }

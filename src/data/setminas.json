@@ -21,11 +21,13 @@
 				"image-7.jpg"
 			],
 			"mapSrc": "https://www.google.com/maps?q=-21.146565,-44.2724333&z=15&output=embed",
-			"contact": "5532999684567",
 			"status": "Lançamento",
 			"tags": ["A partir de 249m²", "Infraestrutura Completa"],
 			"index": 15,
-			"office": ""
+			"office": {
+				"contact": "5532999684567",
+				"mapSrc": ""
+			}
 		},
 		"parque-sao-judas-2": {
 			"nome": "Parque São Judas 2ª fase",
@@ -48,11 +50,13 @@
 				"image-5.jpg"
 			],
 			"mapSrc": "https://www.google.com/maps?q=-20.7792160,-45.2761371&z=15&output=embed",
-			"contact": "5535984244567",
 			"status": "Em Obras",
 			"tags": ["Loteamento Aberto", "A partir de 200m²"],
 			"index": 14,
-			"office": ""
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"brasil-vilela-2": {
 			"nome": "Brasil Vilela 2",
@@ -69,11 +73,13 @@
 			],
 			"galeria": ["image-1.jpg", "image-2.jpg", "image-3.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-20.901726,-45.287382&z=15&output=embed",
-			"contact": "5535984244567",
 			"status": "Em Obras",
 			"tags": ["Loteamento Aberto", "Infraestrutura Completa"],
 			"index": 13,
-			"office": ""
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"parque-olimpico-3": {
 			"nome": "Parque Olímpico 3",
@@ -96,11 +102,13 @@
 				"image-6.jpg"
 			],
 			"mapSrc": "https://www.google.com/maps?q=-18.8801111,-41.9837778&z=15&output=embed",
-			"contact": "5533998800012",
 			"status": "Em Obras",
 			"tags": ["Loteamento Aberto", "A partir de 200m²"],
 			"index": 12,
-			"office": ""
+			"office": {
+				"contact": "5533998800012",
+				"mapSrc": ""
+			}
 		},
 		"parque-sao-judas": {
 			"nome": "Parque São Judas",
@@ -116,10 +124,12 @@
 			],
 			"galeria": ["image-1.jpg", "image-2.jpg", "image-3.jpg", "image-4.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-20.7779220,-45.2795167&z=15&output=embed",
-			"contact": "5535984244567",
 			"status": "Pronto para Construir",
 			"index": 11,
-			"office": ""
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"parque-boulevard": {
 			"nome": "Parque Boulevard",
@@ -136,10 +146,12 @@
 			],
 			"galeria": ["image-1.jpg", "image-2.jpg", "image-3.jpg", "image-4.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-18.882121,-41.986160&z=15&output=embed",
-			"contact": "5533998800012",
 			"status": "Em Obras",
 			"index": 10,
-			"office": ""
+			"office": {
+				"contact": "5533998800012",
+				"mapSrc": ""
+			}
 		},
 		"mirante-do-lago": {
 			"nome": "Mirante do Lago",
@@ -155,10 +167,12 @@
 			],
 			"galeria": ["image-1.png", "image-2.jpg", "image-3.jpg", "image-4.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-20.9164856,-45.2796267&z=15&output=embed",
-			"contact": "5535984244567",
 			"status": "Pronto para Construir",
 			"index": 9,
-			"office": ""
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"dom-couto": {
 			"nome": "Dom Couto",
@@ -180,10 +194,12 @@
 				"image-5.jpg"
 			],
 			"mapSrc": "https://www.google.com/maps?q=-20.5007500,-45.4340278&z=15&output=embed",
-			"contact": "5535984244567",
 			"status": "Pronto para Construir",
 			"index": 8,
-			"office": ""
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"mont-serrat": {
 			"nome": "Mont Serrat",
@@ -200,10 +216,12 @@
 			],
 			"galeria": ["image-1.jpg", "image-2.jpg", "image-3.jpg", "image-4.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-21.2295595,-45.7603489&z=15&output=embed",
-			"contact": "5535984244567",
 			"status": "Pronto para Construir",
 			"index": 7,
-			"office": ""
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"mirante-do-lago-sgp": {
 			"nome": "Mirante do Lago",
@@ -226,10 +244,12 @@
 				"image-5.jpg"
 			],
 			"mapSrc": "https://www.google.com/maps?q=-19.9802149,-44.8434666&z=15&output=embed",
-			"contact": "5535984244567",
 			"status": "Pronto para Construir",
 			"index": 6,
-			"office": ""
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"mirante-da-serra": {
 			"nome": "Mirante da Serra",
@@ -246,10 +266,12 @@
 			],
 			"galeria": ["image-1.png", "image-2.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-20.1976944,-44.4150556&z=15&output=embed",
-			"contact": "5535984244567",
 			"status": "Pronto para Construir",
 			"index": 5,
-			"office": ""
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"residencial-euroville": {
 			"nome": "Residencial Euroville",
@@ -272,10 +294,12 @@
 				"image-5.jpg"
 			],
 			"mapSrc": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3713.9751684883117!2d-45.964187!3d-21.430221!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b5f50ccca726a1%3A0x645556eb9dbd6249!2sResidencial%20Euroville!5e0!3m2!1sen!2sbr!4v1749513076588!5m2!1sen!2sbr",
-			"contact": "5535984244567",
 			"status": "Pronto para Construir",
 			"index": 4,
-			"office": ""
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"parque-tropical": {
 			"nome": "Parque Tropical",
@@ -290,10 +314,12 @@
 			],
 			"galeria": ["image-1.jpg", "image-2.jpg", "image-3.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-20.717775,-46.641746&z=15&output=embed",
-			"contact": "5535984244567",
 			"status": "Pronto para Construir",
 			"index": 3,
-			"office": ""
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"residencial-las-palmas": {
 			"nome": "Residencial Las Palmas",
@@ -309,10 +335,12 @@
 			],
 			"galeria": ["image-1.jpg", "image-2.jpg", "image-3.jpg", "image-4.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-22.235682,-45.894845&z=15&output=embed",
-			"contact": "5535984244567",
 			"status": "Pronto para Construir",
 			"index": 2,
-			"office": ""
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		},
 		"jardim-aeroporto": {
 			"nome": "Jardim Aeroporto",
@@ -327,10 +355,12 @@
 			],
 			"galeria": ["image-1.jpg", "image-2.jpg", "image-3.jpg"],
 			"mapSrc": "https://www.google.com/maps?q=-21.322586,-46.732894&z=15&output=embed",
-			"contact": "5535984244567",
 			"status": "Pronto para Construir",
 			"index": 1,
-			"office": ""
+			"office": {
+				"contact": "5535984244567",
+				"mapSrc": ""
+			}
 		}
 	},
 	"noticias": {
