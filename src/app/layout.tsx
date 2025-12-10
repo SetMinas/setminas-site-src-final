@@ -4,6 +4,7 @@ import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { AuthProvider } from "@/contexts/AuthContext";
 
 export const metadata = {
 	title: "Setminas - Seu Lugar ao Seu Alcance",
@@ -22,23 +23,25 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="pt-BR">
 			<body className="flex flex-col min-h-screen">
-				<Script
-					id="gtag-google-ads"
-					src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
-					strategy="afterInteractive"
-				/>
-				<Script id="gtag-init" strategy="afterInteractive">
-					{`
-						window.dataLayer = window.dataLayer || [];
-						function gtag(){dataLayer.push(arguments);}
-						gtag('js', new Date());
-						gtag('config', '${GOOGLE_ADS_ID}');
-					`}
-				</Script>
-				<Header />
-				<div className="flex-grow">{children}</div>
-				<Footer />
-				<Analytics />
+				<AuthProvider>
+					<Script
+						id="gtag-google-ads"
+						src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+						strategy="afterInteractive"
+					/>
+					<Script id="gtag-init" strategy="afterInteractive">
+						{`
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments);}
+							gtag('js', new Date());
+							gtag('config', '${GOOGLE_ADS_ID}');
+						`}
+					</Script>
+					<Header />
+					<div className="flex-grow">{children}</div>
+					<Footer />
+					<Analytics />
+				</AuthProvider>
 			</body>
 		</html>
 	);
