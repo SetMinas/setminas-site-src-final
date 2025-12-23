@@ -25,7 +25,7 @@ export default function Hero() {
 							Ver Empreendimentos
 						</Link>
 						<Link
-							href="/contato#faleconosco"
+							href="/sobre-nos#faleconosco"
 							className="btn-secondary text-center"
 						>
 							Fale Conosco
