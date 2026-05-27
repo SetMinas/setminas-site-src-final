@@ -4,8 +4,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { ref, onValue } from "firebase/database";
-import { database } from "@/lib/firebase";
+import { db } from "@/lib/firebase";
+import { collection, getDocs, query, orderBy } from "firebase/firestore";
 
 import { LoteamentoType } from "@/data/empreendimentos/loteamentoType";
 import Spinner from "@/components/ui/spinner";
@@ -38,36 +38,36 @@ const EmpreendimentosPage: React.FC = () => {
 	};
 
 	React.useEffect(() => {
-		const loteamentoRef = ref(database, "loteamentos/");
+		async function fetchLoteamentos() {
+			try {
+				const q = query(
+					collection(db, "loteamentos"),
+					orderBy("index", "desc"),
+				);
 
-		const unsubscribe = onValue(loteamentoRef, (snapshot) => {
-			const data = snapshot.val();
+				const querySnapshot = await getDocs(q);
 
-			if (!data) {
-				setLoteamentos([]);
-				return;
+				const lista: Loteamento[] = querySnapshot.docs.map((doc) => {
+					const loteamento = doc.data() as LoteamentoType;
+
+					return {
+						id: doc.id,
+						nome: loteamento.nome,
+						cidade: loteamento.cidade,
+						descricao: loteamento.descricao,
+						imagemUrl: loteamento.galeria?.[0] ?? "",
+						status: loteamento.status,
+						index: loteamento.index,
+					};
+				});
+
+				setLoteamentos(lista);
+			} catch (err) {
+				console.error(err);
 			}
+		}
 
-			const lista: Loteamento[] = Object.entries(data).map(([key, value]) => {
-				const loteamento = value as LoteamentoType;
-
-				return {
-					id: key,
-					nome: loteamento.nome,
-					cidade: loteamento.cidade,
-					descricao: loteamento.descricao,
-					imagemUrl: loteamento.galeria[0],
-					status: loteamento.status,
-					index: loteamento.index,
-				};
-			});
-
-			setLoteamentos(lista.sort((a, b) => b.index - a.index));
-		});
-
-		return () => {
-			unsubscribe();
-		};
+		fetchLoteamentos();
 	}, []);
 
 	return (
@@ -109,7 +109,7 @@ const EmpreendimentosPage: React.FC = () => {
 
 							if (
 								["jardim-aeroporto", "residencial-las-palmas"].includes(
-									loteamento.id
+									loteamento.id,
 								)
 							) {
 								logoContainerClass += " w-2/3 mx-auto";
@@ -132,7 +132,7 @@ const EmpreendimentosPage: React.FC = () => {
 										{loteamento.status && (
 											<div
 												className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold text-white ${BadgeColor(
-													loteamento.status
+													loteamento.status,
 												)}`}
 											>
 												{loteamento.status}

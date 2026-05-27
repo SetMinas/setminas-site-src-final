@@ -4,8 +4,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { ref, onValue } from "firebase/database";
-import { database } from "@/lib/firebase";
+import { db } from "@/lib/firebase";
+import { collection, getDocs, query, orderBy, limit } from "firebase/firestore";
 import Spinner from "@/components/ui/spinner";
 
 interface BlogType {
@@ -26,28 +26,31 @@ export default function BlogSection() {
 	const [loading, setLoading] = React.useState<boolean>(true);
 
 	React.useEffect(() => {
-		const blogRef = ref(database, "noticias/");
+		async function fetchPosts() {
+			try {
+				setLoading(true);
 
-		const unsubscribe = onValue(blogRef, (snapshot) => {
-			const data = snapshot.val();
+				const q = query(
+					collection(db, "noticias"),
+					orderBy("date", "desc"),
+					limit(3),
+				);
 
-			if (!data) {
-				setBlogPosts([]);
-				return;
+				const querySnapshot = await getDocs(q);
+
+				const lista: BlogType[] = querySnapshot.docs.map(
+					(doc) => doc.data() as BlogType,
+				);
+
+				setBlogPosts(lista);
+			} catch (err) {
+				console.error(err);
+			} finally {
+				setLoading(false);
 			}
+		}
 
-			const lista: BlogType[] = Object.entries(data)
-				.map(([_, value]) => value as BlogType)
-				.sort((a, b) => (a.date < b.date ? 1 : -1))
-				.slice(0, 3);
-
-			setBlogPosts(lista);
-			setLoading(false);
-		});
-
-		return () => {
-			unsubscribe();
-		};
+		fetchPosts();
 	}, []);
 
 	return (
@@ -82,7 +85,7 @@ export default function BlogSection() {
 										{post.title}
 									</h3>
 									<p className="text-gray-600 mb-3 sm:mb-4">
-										{new Date(post.date).toLocaleDateString("pt-BR")}
+										{post.date.split("-").reverse().join("/")}
 									</p>
 									<p className="text-gray-700 mb-4 text-sm sm:text-base text-center">
 										{post.excerpt}

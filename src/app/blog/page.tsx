@@ -4,9 +4,21 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { ref, onValue } from "firebase/database";
-import { database } from "@/lib/firebase";
+import { db } from "@/lib/firebase";
 import Spinner from "@/components/ui/spinner";
+
+import {
+	collection,
+	query,
+	getDocs,
+	orderBy,
+	where,
+	limit,
+	startAfter,
+	QueryConstraint,
+	DocumentSnapshot,
+	DocumentData,
+} from "firebase/firestore";
 
 interface BlogType {
 	slug: string;
@@ -20,48 +32,89 @@ interface BlogType {
 export default function BlogPage() {
 	const [startDate, setStartDate] = React.useState<string>("");
 	const [endDate, setEndDate] = React.useState<string>("");
+	const [count, setCount] = React.useState<number>(10);
 	const [showFilters, setShowFilters] = React.useState<boolean>(false);
 	const [blogPost, setBlogPosts] = React.useState<BlogType[]>([]);
 	const [loading, setLoading] = React.useState<boolean>(true);
 
+	const [lastDoc, setLastDoc] =
+		React.useState<DocumentSnapshot<DocumentData> | null>(null);
+
+	const [firstDoc, setFirstDoc] =
+		React.useState<DocumentSnapshot<DocumentData> | null>(null);
+
+	const [pageStack, setPageStack] = React.useState<
+		DocumentSnapshot<DocumentData>[]
+	>([]);
+
+	const [hasNextPage, setHasNextPage] = React.useState(false);
+
 	React.useEffect(() => {
-		const blogRef = ref(database, "noticias/");
+		fetchPosts(true);
+	}, [startDate, endDate, count]);
 
-		const unsubscribe = onValue(blogRef, (snapshot) => {
-			const data = snapshot.val();
+	function scrollToTop() {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	}
 
-			if (!data) {
-				setBlogPosts([]);
-				return;
+	async function fetchPosts(reset = false) {
+		try {
+			setLoading(true);
+
+			const constraints: QueryConstraint[] = [
+				orderBy("date", "desc"),
+				limit(count + 1),
+			];
+
+			if (startDate) {
+				constraints.unshift(where("date", ">=", startDate));
 			}
 
-			const lista: BlogType[] = Object.entries(data)
-				.map(([_, value]) => value as BlogType)
-				.filter((post) => {
-					const postDate = new Date(post.date);
+			if (endDate) {
+				constraints.unshift(where("date", "<=", endDate));
+			}
 
-					if (startDate) {
-						const start = new Date(startDate);
-						if (postDate < start) return false;
-					}
+			if (!reset && lastDoc) {
+				constraints.push(startAfter(lastDoc));
+			}
 
-					if (endDate) {
-						const end = new Date(endDate);
-						end.setHours(23, 59, 59, 999);
-						if (postDate > end) return false;
-					}
+			const q = query(collection(db, "noticias"), ...constraints);
 
-					return true;
-				})
-				.sort((a, b) => (a.date < b.date ? 1 : -1));
+			const querySnapshot = await getDocs(q);
+
+			const docs = querySnapshot.docs;
+
+			const hasMore = docs.length > count;
+
+			const visibleDocs = hasMore ? docs.slice(0, count) : docs;
+
+			const lista: BlogType[] = visibleDocs.map(
+				(doc) => doc.data() as BlogType,
+			);
 
 			setBlogPosts(lista);
-		});
 
-		return () => {
-			unsubscribe();
-		};
-	}, [startDate, endDate]);
+			scrollToTop();
+
+			setHasNextPage(hasMore);
+
+			if (visibleDocs.length > 0) {
+				setFirstDoc(visibleDocs[0]);
+				setLastDoc(visibleDocs[visibleDocs.length - 1]);
+			}
+
+			if (reset) {
+				setPageStack([]);
+			}
+		} catch (err) {
+			console.error(err);
+		} finally {
+			setLoading(false);
+		}
+	}
 
 	return (
 		<main className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-8">
@@ -129,6 +182,27 @@ export default function BlogPage() {
 							/>
 						</div>
 
+						<div className="flex flex-col gap-1">
+							<label
+								htmlFor="count"
+								className="text-sm font-medium text-gray-700"
+							>
+								Quantidade
+							</label>
+
+							<select
+								id="count"
+								value={count}
+								onChange={(e) => setCount(Number(e.target.value))}
+								className="rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+							>
+								<option value={5}>5</option>
+								<option value={10}>10</option>
+								<option value={15}>15</option>
+								<option value={20}>20</option>
+							</select>
+						</div>
+
 						<div className="ml-auto flex items-end gap-2">
 							<button
 								type="button"
@@ -178,7 +252,7 @@ export default function BlogPage() {
 
 									<div className="flex flex-1 flex-col p-4">
 										<span className="text-xs text-gray-500">
-											{new Date(post.date).toLocaleDateString("pt-BR")}
+											{post.date.split("-").reverse().join("/")}
 										</span>
 										<h2 className="mt-1 text-lg font-semibold leading-snug">
 											{post.title}
@@ -196,6 +270,85 @@ export default function BlogPage() {
 						))}
 					</ul>
 				)}
+				<div className="mt-8 flex items-center justify-center gap-4">
+					<button
+						type="button"
+						disabled={pageStack.length === 0 || loading}
+						onClick={async () => {
+							if (pageStack.length === 0) return;
+
+							const previousStack = [...pageStack];
+
+							previousStack.pop();
+
+							const previousCursor = previousStack[previousStack.length - 1];
+
+							setPageStack(previousStack);
+
+							try {
+								setLoading(true);
+
+								const constraints: QueryConstraint[] = [
+									orderBy("date", "desc"),
+									limit(count + 1),
+								];
+
+								if (startDate) {
+									constraints.unshift(where("date", ">=", startDate));
+								}
+
+								if (endDate) {
+									constraints.unshift(where("date", "<=", endDate));
+								}
+
+								if (previousCursor) {
+									constraints.push(startAfter(previousCursor));
+								}
+
+								const q = query(collection(db, "noticias"), ...constraints);
+
+								const querySnapshot = await getDocs(q);
+
+								const docs = querySnapshot.docs;
+
+								const hasMore = docs.length > count;
+
+								const visibleDocs = hasMore ? docs.slice(0, count) : docs;
+
+								setHasNextPage(hasMore);
+
+								setBlogPosts(visibleDocs.map((doc) => doc.data() as BlogType));
+
+								scrollToTop();
+
+								if (visibleDocs.length > 0) {
+									setFirstDoc(visibleDocs[0]);
+									setLastDoc(visibleDocs[visibleDocs.length - 1]);
+								}
+							} finally {
+								setLoading(false);
+							}
+						}}
+						className="rounded-md border px-4 py-2 text-sm font-medium disabled:opacity-50"
+					>
+						← Anterior
+					</button>
+
+					<button
+						type="button"
+						disabled={!hasNextPage || loading}
+						onClick={async () => {
+							if (!lastDoc) return;
+
+							setPageStack((prev) => [...prev, firstDoc!]);
+
+							await fetchPosts(false);
+						}}
+						className="rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
+					>
+						Próxima →
+					</button>
+				</div>
 			</section>
 		</main>
 	);
