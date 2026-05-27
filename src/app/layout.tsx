@@ -10,11 +10,6 @@ export const metadata = {
 	title: "Setminas - Seu Lugar ao Seu Alcance",
 	description:
 		"Há mais de 9 anos desenvolvendo loteamentos de qualidade em Minas Gerais.",
-	icons: {
-		icon: "/images/logos/favicon_setminas.png",
-		shortcut: "/images/logos/favicon_setminas.png",
-		apple: "/apple-touch-icon.png",
-	},
 };
 
 const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
@@ -22,6 +17,9 @@ const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="pt-BR">
+			<head>
+				<meta name="apple-mobile-web-app-title" content="SetMinas" />
+			</head>
 			<body className="flex flex-col min-h-screen">
 				<AuthProvider>
 					<Script
