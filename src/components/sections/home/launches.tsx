@@ -4,8 +4,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { ref, onValue } from "firebase/database";
-import { database } from "@/lib/firebase";
+import { db } from "@/lib/firebase";
+import { collection, getDocs, query, orderBy, limit } from "firebase/firestore";
 import { LoteamentoType } from "@/data/empreendimentos/loteamentoType";
 
 interface Loteamento {
@@ -38,37 +38,38 @@ export default function LaunchesSection() {
 	};
 
 	React.useEffect(() => {
-		const loteamentoRef = ref(database, "loteamentos/");
+		async function fetchLoteamentos() {
+			try {
+				const q = query(
+					collection(db, "loteamentos"),
+					orderBy("index", "desc"),
+					limit(3),
+				);
 
-		const unsubscribe = onValue(loteamentoRef, (snapshot) => {
-			const data = snapshot.val();
+				const querySnapshot = await getDocs(q);
 
-			if (!data) {
-				setLoteamentos([]);
-				return;
+				const lista: Loteamento[] = querySnapshot.docs.map((doc) => {
+					const loteamento = doc.data() as LoteamentoType;
+
+					return {
+						id: doc.id,
+						nome: loteamento.nome,
+						cidade: loteamento.cidade,
+						descricao: loteamento.descricao,
+						imagemUrl: loteamento.galeria?.[0] ?? "",
+						status: loteamento.status,
+						tags: loteamento.tags || [],
+						index: loteamento.index,
+					};
+				});
+
+				setLoteamentos(lista);
+			} catch (err) {
+				console.error(err);
 			}
+		}
 
-			const lista: Loteamento[] = Object.entries(data).map(([key, value]) => {
-				const loteamento = value as LoteamentoType;
-
-				return {
-					id: key,
-					nome: loteamento.nome,
-					cidade: loteamento.cidade,
-					descricao: loteamento.descricao,
-					imagemUrl: loteamento.galeria[0],
-					status: loteamento.status,
-					tags: loteamento.tags || [],
-					index: loteamento.index,
-				};
-			});
-
-			setLoteamentos(lista.sort((a, b) => b.index - a.index).splice(0, 3));
-		});
-
-		return () => {
-			unsubscribe();
-		};
+		fetchLoteamentos();
 	}, []);
 
 	return (
@@ -93,7 +94,7 @@ export default function LaunchesSection() {
 								{launch.status && (
 									<div
 										className={`absolute top-4 right-4 ${BadgeColor(
-											launch.status
+											launch.status,
 										)} text-white px-3 py-1 rounded-full text-xs sm:text-sm font-semibold`}
 									>
 										{launch.status}
